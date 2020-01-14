@@ -51,89 +51,7 @@ $wp_customize->add_control( 'frontpage_position_sidebar',
 
 // End of Frontpage Sidebar.
 
-
-// Flash Posts #2
-
-$wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'select_flash_news_category',
-    array(
-        'label'       => esc_html__('Flash Posts Category', 'webnews'),
-        'description' => esc_html__('select category to be shown on trending posts ', 'webnews'),
-        'section'     => 'webnews_flash_posts_settings',
-        'type'        => 'dropdown-taxonomies',
-        'taxonomy'    => 'category',
-        'priority'    => 2,
-        'active_callback' => 'webnews_flash_posts_status'
-    )));
-
-$wp_customize->add_section('webnews_flash_posts_settings',
-    array(
-        'title'      => esc_html__('Flash Posts', 'webnews'),
-        'priority'   => 2,
-        'capability' => 'edit_theme_options',
-        'panel'      => 'frontpage_option_panel',
-    )
-);
-
-$wp_customize->add_setting('show_flash_news',
-    array(
-        'default'           => false,
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'webnews_sanitize_checkbox',
-    )
-);
-
-$wp_customize->add_control('show_flash_news',
-    array(
-        'label'    => esc_html__('Enable Flash Posts', 'webnews'),
-        'section'  => 'webnews_flash_posts_settings',
-        'type'     => 'checkbox',
-        'priority' => 1,
-
-    )
-);
-
-$wp_customize->add_setting('flash_news_title',
-    array(
-        'default'           => __('Flash Story', 'webnews'),
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'sanitize_text_field',
-    )
-);
-
-$wp_customize->add_control('flash_news_title',
-    array(
-        'label'    => esc_html__('Flash Story Title', 'webnews'),
-        'section'  => 'webnews_flash_posts_settings',
-        'type'     => 'text',
-        'priority' => 2,
-        'active_callback' => 'webnews_flash_posts_status'
-
-    )
-);
-
-$wp_customize->add_setting('select_flash_news_category',
-    array(
-        'default'           => 0,
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'absint',
-    )
-);
-
-$wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'select_flash_news_category',
-    array(
-        'label'       => esc_html__('Flash Posts Category', 'webnews'),
-        'description' => esc_html__('select category to be shown on trending posts ', 'webnews'),
-        'section'     => 'webnews_flash_posts_settings',
-        'type'        => 'dropdown-taxonomies',
-        'taxonomy'    => 'category',
-        'priority'    => 2,
-        'active_callback' => 'webnews_flash_posts_status'
-    )));
-
-//End of Flash Posts 
-
-
-// Main Bainner #3
+// Main Bainner #2
 
 $wp_customize->add_section('frontpage_main_banner_settings',
     array(
@@ -243,7 +161,7 @@ $wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'selec
 
 
 
-// Featured News #4
+// Featured News #3
 
 $wp_customize->add_section('frontpage_featured_news_settings',
     array(

@@ -15,8 +15,7 @@
  body{
  	font-family: 'Open Sans';
  }
-
-a:hover, a:focus, a:active {
+ a:hover, a:focus, a:active {
 	text-decoration: none;
 }
 
@@ -25,30 +24,6 @@ a:hover, a:focus, a:active {
 }
 .text-collgray{
 	color: #e7e7e7;
-}
-.pl-2rem{
-	margin-left: 2rem !important;
-}
-.pt-25rem{
-	padding-top: 2.5rem !important;
-}
-.ml-6rem {
-    margin-left: 6rem;
-}
-.ml-n6rem {
-    margin-left: -6rem;
-}
-.ml-2rem{
-	margin-left: 2rem;
-}
-.ml-n10rem{
-	margin-left: -10.5rem;
-}
-.ml-1rem{
-	margin-top: 1rem;
-}
-.ml-15rem{
-   margin-left:  15.8rem;
 }
 /*
 	Header
@@ -234,6 +209,7 @@ h5.category a{
 	color: white;
 	padding: 10px;
 	font-weight: lighter;
+	font-size: 17px;
 }
 
 h5.category.treding li{
@@ -242,7 +218,6 @@ h5.category.treding li{
 }
 .entry-meta h5 {
 	font-size: 16px;
-	color: #e7e7e7;
 	font-weight: lighter;
 }
 .entry-meta i{
@@ -303,26 +278,7 @@ div.fita span{
   height: 2.2px;
   background-color: #1b4871e6;
 }
-.widget-footer{
-	padding: 5px;
-}
-.widget-footer ul{
-	margin: 0;
-	padding: 0;
-}
-.widget-footer li{
-	list-style: none;
-	padding-top:8px;
-}
-.widget-footer li i{
-	margin-right: 8px;
-}
-.widget-footer .description{
-	padding-top: 8px;
-}
-.widget-footer h2 ,
-.widget-footer a,
-.widget-footer li,
-.widget-footer .description{
-	color: white;
+.entry-footer{
+	padding-top: 10px;
+	border-bottom: 1px solid #f3f3f3;
 }

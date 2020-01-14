@@ -6,17 +6,10 @@
  *
  */
 
-    $category 		  = get_theme_mod('select_flash_news_category');
-    $all_posts 	     = webnews_get_posts(8, $category);
-    
-    $title_slider_flash   	  = get_theme_mod('main_news_slider_title') ;
-    $flash_active = false;
-    if (get_theme_mod('show_flash_news') == true) {
-    	$title_slider_flash     = get_theme_mod('flash_news_title') ;
-    	$flash_active = true;
-    }
-
-    $title_trending    	  = get_theme_mod('trending_title') ;
+    $category 		= get_theme_mod('select_flash_news_category');
+    $all_posts 	    = webnews_get_posts(8, $category);
+    $title_slider 	= get_theme_mod('main_news_slider_title') ;
+    $title_trending = get_theme_mod('trending_title') ;
 
 ?>
 
@@ -25,19 +18,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-sm-12 pb-5">
-					<?php if ($flash_active) {
-					flash_active($title_slider_flash);
-						
-					} else{?>
 					<!-- bar-notification -->
 					<div class="container-fluid pb-4">
 						<div class="row">
-							<div class="col-md-2 bg-danger text-white text-uppercase p-2"><?php echo $title_slider_flash; ?></div>
+							<div class="col-md-2 bg-danger text-white text-uppercase p-2"><?php echo $title_slider; ?></div>
 							<div class="col-md-10 bg-collgray"></div>
 						</div>
 					</div>
 					<!-- end of bar-notification -->
-					<?php } ?>
 					<!-- slider -->
 					 <?php if ($all_posts->have_posts()) : ?>
 					  <div id="carouselCaptions" class="carousel slide carousel-fade" data-ride="carousel">

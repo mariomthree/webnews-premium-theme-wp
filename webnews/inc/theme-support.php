@@ -43,51 +43,6 @@ function webnews_get_posts($number_of_posts, $category = '0'){
         return $all_posts;
 
     }
-    function webnews_get_number_views( $postID ) {
-    
-        $metaKey = 'webnews_number_post_views';
-        $views = get_post_meta( $postID, $metaKey, true );
-        $views = $views == '' ? '0' : $views;
-        return $views;
-    }
-
-    function webnews_update_number_views($postID)
-    {
-        
-        $metaKey = 'webnews_number_post_views';
-        $views = get_post_meta( $postID, $metaKey, true );
-        
-        $count = ( empty( $views ) ? 0 : $views );
-        $count++;
-        
-        update_post_meta( $postID, $metaKey, $count );
-        
-    }
-
-    function webnews_entry_meta($show = ''){
-       
-        $author     = get_theme_mod('post_meta_author');
-        $date       = get_theme_mod('post_meta_date');
-        $views      = get_theme_mod('post_meta_views');
-        $comments   = get_theme_mod('post_meta_comments');
-
-        $output = '<h5>';
-        if ($author && $show == 'author' || $show == '') {
-            $output.='<i class="fa fa-user"></i>&nbsp;'. get_the_author();
-        }
-        if ($date && $show == 'date' || $show == '') {
-            $output.=' <i class="fa fa-calendar"></i>&nbsp;'.get_the_date();
-        }
-        if ($views && $show == 'views' || $show == '') {
-            $output.=' <i class="fa fa-eye"></i>&nbsp;'. esc_attr(webnews_get_number_views(get_the_ID()));
-        }
-        if ($comments && $show == 'comments' || $show == '') {
-            $output.=' <i class="fa fa-comment"></i>&nbsp;'.get_comments_number();
-        }
-        $output.='</h5>';
-
-        return $output;
-
-    }
+   
 
 

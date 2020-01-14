@@ -617,11 +617,12 @@ a {
 }
 
 a:visited {
-	color: purple;
+	color: currentColor;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #1b4871;
+	text-decoration: none;
 }
 
 a:focus {
@@ -835,25 +836,47 @@ a:hover, a:active {
 .widget-title{
 	font-size: 21px;
 	color: black;
-
 }
-.widget-adjust ul{
-	list-style: none;
-	margin: 0;
+
+.widget ul{
+	list-style: circle;
+	margin-left: 25px;
 	padding: 0;
 }
-.widget-adjust li{
+
+.widget li{
 	padding-top: 3px;
-	border-bottom: 1px solid #f3f3f3;
 }
-.widget-adjust a{
-	color: #333;
+.widget a{
+	color: #222;
 }
-.widget-adjust a:hover{
+.widget a:hover{
 	color: #1b4871;
 }
 
-
+.widget-footer{
+	padding: 5px;
+}
+.widget-footer ul{
+	margin: 0;
+	padding: 0;
+}
+.widget-footer li{
+	list-style: none;
+	padding-top:8px;
+}
+.widget-footer li i{
+	margin-right: 8px;
+}
+.widget-footer .description{
+	padding-top: 8px;
+}
+.widget-footer h2 ,
+.widget-footer a,
+.widget-footer li,
+.widget-footer .description{
+	color: white;
+}
 
 /*--------------------------------------------------------------
 # Content
@@ -883,6 +906,9 @@ a:hover, a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+.entry-header h1{
+	font-size: 30px;
 }
 
 /*--------------------------------------------------------------

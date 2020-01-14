@@ -241,9 +241,6 @@ function webnews_scripts() {
 	wp_register_script('main', get_template_directory_uri(). '/js/main.js',false,'1.0.0',true);
 	wp_enqueue_script('main');
 
-	wp_register_script('marquee', get_template_directory_uri(). '/js/marquee/jquery.marquee.js',false,'',true);
-	wp_enqueue_script('marquee');
-
 
 }
 add_action( 'wp_enqueue_scripts', 'webnews_scripts' );
@@ -281,6 +278,3 @@ require get_template_directory() . '/inc/widgets/social-links.php';
 require get_template_directory() . '/inc/widgets/facebook.php';
 require get_template_directory() . '/inc/widgets/twitter.php';
 require get_template_directory() . '/template-parts/frontpage-parts/featured-functions.php';
-require get_template_directory() . '/template-parts/frontpage-parts/flash-active.php';
-
-
