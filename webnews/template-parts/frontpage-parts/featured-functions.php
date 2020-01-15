@@ -29,7 +29,7 @@
 	                        <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 	                      </h5>
 	                      <div class="entry-meta frontpage">
-	                        <?php echo webnews_entry_meta(); ?>
+	                        <?php webnews_entry_meta(); ?>
 	                      </div>    
 	                </div>
 	            </div>
@@ -151,7 +151,7 @@
 	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
                 	   	<div class="carousel-caption d-md-block text-left">
                       	 <div class="entry-meta frontpage">
-           					<?php echo webnews_entry_meta(); ?>
+           					<?php webnews_entry_meta(); ?>
        					  </div>	
 				        </div>
 	                </div>
@@ -239,7 +239,7 @@
 	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
 	                      	<div class="carousel-caption d-md-block text-left">
 	                      	 <div class="entry-meta frontpage">
-	           					<?php echo webnews_entry_meta(); ?>
+	           					<?php webnews_entry_meta(); ?>
 	       					  </div>	
 					        </div>
 

@@ -11,12 +11,18 @@
  *
  * @package WebNews
  */
-
+$header_img = has_header_image() ? get_header_image() : get_template_directory_uri().'/assets/img/bg-header.jpg';
+$page_title = str_replace('Category:', '', get_the_title());
 get_header();
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div style="background-image: url(<?php echo $header_img;?>);">
+				<header class="entry-header p-5">
+					<?php echo '<h1 class="entry-title">'.$page_title.'</h1>' ?>
+				</header><!-- .entry-header -->
+			</div>
 			<div class="container-fluid p-5">
 				<div class="row">
 					<div class="col-xl-8 col-md-8 col-sm-12">

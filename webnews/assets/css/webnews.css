@@ -64,7 +64,7 @@
 
 .site-description{
 	font-size: 24px;
-	margin-top: -15px;
+	margin-top: -25px;
 }
 /*
 	Navigation
@@ -207,9 +207,9 @@ h5.category li {
 
 h5.category a{
 	color: white;
-	padding: 10px;
+	padding: 8px;
 	font-weight: lighter;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 h5.category.treding li{
@@ -281,4 +281,10 @@ div.fita span{
 .entry-footer{
 	padding-top: 10px;
 	border-bottom: 1px solid #f3f3f3;
+}
+.entry-title{
+	font-size: 25px;
+}
+.page-title{
+	font-size: 25px;
 }

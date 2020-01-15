@@ -6,14 +6,15 @@
  *
  * @package WebNews
  */
-if(is_singular())
+if(is_singular()){
 	get_template_part('template-parts/content-single');
-else
+}else{
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header pb-3">
+		<h5 class="category pt-2"><?php the_category(); ?></h5>
 		<?php
 			the_title( '<h2 class="entry-title pb-1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
@@ -28,12 +29,9 @@ else
 
 	<?php webnews_post_thumbnail(); ?>
 	
-	<h5 class="category pt-2">
-		<?php the_category(); ?>
-	</h5>
 
 	<div class="entry-content">
-		<a href="<?php esc_url( get_permalink() ) ?>" rel="bookmark" class="text-dark">
+		<a href="<?php the_permalink() ?>" rel="bookmark" class="text-dark">
 			<?php echo substr(strip_tags(get_the_content()),0,250).' [...]'; ?>
 		</a>
 	</div><!-- .entry-content -->
@@ -43,3 +41,4 @@ else
 	</footer><!-- .entry-footer -->
 
 </article>
+<?php } ?>

@@ -63,7 +63,3 @@ function webnews_customize_preview_js() {
 	wp_enqueue_script( 'webnews-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'webnews_customize_preview_js' );
-
-function webnews_get_option($key){
-	echo esc_html(get_theme_mod($key));
-}
