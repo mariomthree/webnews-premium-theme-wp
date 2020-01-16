@@ -24,8 +24,20 @@ $page_title = str_replace('Category:', '', get_the_archive_title());
 
 		<div class="container-fluid py-5 px-3">
 			<div class="row">
+				<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
+				<div class="col-xl-4 col-md-4 col-sm-12">
+					<?php get_sidebar(); ?>
+				</div>
+				<?php 
+					endif; 
+					if (get_theme_mod('blog_sidebar_position') == 'none') :
+				?>
+				<div class="col-xl-12 col-md-12 col-sm-12">
+					<?php else: ?>
 				<div class="col-xl-8 col-md-8 col-sm-12">
-				<?php if ( have_posts() ) : ?>
+					<?php
+					endif;
+				 	if ( have_posts() ) : ?>
 
 					<?php
 					/* Start the Loop */
@@ -50,9 +62,11 @@ $page_title = str_replace('Category:', '', get_the_archive_title());
 				endif; ?>
 				</div>
 
-				<div class="col-xl-4 col-md-4 col-sm-12">
-					<?php get_sidebar();?>
-				</div>
+				<?php if (get_theme_mod('blog_sidebar_position') == 'right') : ?>
+					<div class="col-xl-4 col-md-4 col-sm-12">
+						<?php get_sidebar(); ?>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 

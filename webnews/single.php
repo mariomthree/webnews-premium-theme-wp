@@ -15,8 +15,19 @@ get_header();
 
 			<div class="container-fluid py-5">
 				<div class="row">
-					<div class="col-xl-8 col-md-8 col-sm-12">
-						<?php
+					<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
+						<div class="col-xl-4 col-md-4 col-sm-12">
+							<?php get_sidebar(); ?>
+						</div>
+						<?php 
+							endif; 
+							if (get_theme_mod('blog_sidebar_position') == 'none') :
+						?>
+						<div class="col-xl-12 col-md-12 col-sm-12">
+							<?php else: ?>
+						<div class="col-xl-8 col-md-8 col-sm-12">
+							<?php
+							endif;
 							while ( have_posts() ) :
 								the_post();
 								webnews_update_number_views( get_the_ID() );
@@ -32,9 +43,12 @@ get_header();
 							endwhile; // End of the loop.
 						?>
 					</div>
-					<div class="col-xl-4 col-md-4 col-sm-12">
-						<?php get_sidebar(); ?>
-					</div>
+				
+					<?php if (get_theme_mod('blog_sidebar_position') == 'right') : ?>
+						<div class="col-xl-4 col-md-4 col-sm-12">
+							<?php get_sidebar(); ?>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
 

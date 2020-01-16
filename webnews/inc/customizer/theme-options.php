@@ -60,7 +60,7 @@ $wp_customize->add_section('blog_sidebar',
 $wp_customize->add_setting(
     'blog_sidebar_position',
     array(
-        'default'           => 'left',
+        'default'           => 'right',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'webnews_sanitize_select',
     )

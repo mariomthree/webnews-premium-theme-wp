@@ -50,7 +50,7 @@
 	                            $url = '';
 	                        } 
 	                ?>
-	                <div class="row row-adjust">
+	                <div class="row row-adjust my-3">
 	                    <div class="col-md-4 filter">
 	                        <div class="meta-slim slim frontpage">
 	                           <?php echo webnews_entry_meta('date'); ?>

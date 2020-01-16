@@ -131,38 +131,53 @@
 	font-size: 35px;
 	color: #1b4871;
 }
+.bg-facebook{
+	background-color: #3b5998;
+}
 .facebook:hover {
- color:#3b5998
+ color:#3b5998;	
+}
+.bg-googleplus{
+	background-color: #dd4b39;
 }
 .googleplus:hover {
- color:#dd4b39
+ color:#dd4b39;
+}
+.bg-twitter{
+	background-color: #00aced;
 }
 .twitter:hover {
- color:#00aced
+ color:#00aced;
 }
 .instagram:hover {
- color:#517fa4
+ color:#517fa4;
+}
+.bg-pinterest{
+	background-color: #cb2027;
 }
 .pinterest:hover {
- color:#cb2027
+ color:#cb2027;
 }
 .skype:hover {
- color:#0078ca
+ color:#0078ca;
 }
 .vimeo:hover {
- color:#aad450
+ color:#aad450;
 }
 .youtube:hover {
- color:#bb0000
+ color:#bb0000;
 }
 .dribbble:hover {
- color:#ea4c89
+ color:#ea4c89;
+}
+.bg-linkedin{
+	background-color: #007bb6;
 }
 .linkedin:hover {
- color:#007bb6
+ color:#007bb6;
 }
 .rss:hover {
- color:#FF9900
+ color:#FF9900;
 }
 
 /*
@@ -285,6 +300,24 @@ div.fita span{
 .entry-title{
 	font-size: 25px;
 }
+.entry-title a{
+		color: black;
+}
+.entry-title a:hover{
+	color: #1b4871;
+}
 .page-title{
 	font-size: 25px;
+}
+.tags-list{
+	padding-bottom: 25px;
+}
+.tags-links a{
+	color: black;
+}
+.share a{
+	width: 80px;
+}
+.share i{
+	font-size: 20px;
 }

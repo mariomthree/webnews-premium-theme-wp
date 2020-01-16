@@ -13,14 +13,26 @@
  */
 
 get_header();
+
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="container-fluid py-5 px-4">
 				<div class="row">
+					<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
+					<div class="col-xl-4 col-md-4 col-sm-12">
+						<?php get_sidebar(); ?>
+					</div>
+					<?php 
+						endif; 
+						if (get_theme_mod('blog_sidebar_position') == 'none') :
+					?>
+					<div class="col-xl-12 col-md-12 col-sm-12">
+						<?php else: ?>
 					<div class="col-xl-8 col-md-8 col-sm-12">
 						<?php
+						endif;
 						if ( have_posts() ) :
 
 							if ( is_home() && ! is_front_page() ) :
@@ -53,9 +65,11 @@ get_header();
 						endif;
 						?>
 					</div>
+					<?php if (get_theme_mod('blog_sidebar_position') == 'right') : ?>
 					<div class="col-xl-4 col-md-4 col-sm-12">
 						<?php get_sidebar(); ?>
 					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 

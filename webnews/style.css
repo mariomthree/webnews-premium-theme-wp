@@ -730,6 +730,12 @@ a:hover, a:active {
 	padding: 8px;
 	background-color: #e7e7e7;
 }
+.nav-previous{
+		border-right: 1.5px solid #888;
+}
+.nav-next{
+		border-left: 1.5px solid #888;
+}
 .nav-previous:before{
 	content: '<<';
 	padding-right: 10px;
