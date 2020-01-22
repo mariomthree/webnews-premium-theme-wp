@@ -273,8 +273,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/theme-support.php';
+require get_template_directory() . '/inc/theme-info.php';
 require get_template_directory() . '/inc/widgets/contact-info.php';
 require get_template_directory() . '/inc/widgets/social-links.php';
 require get_template_directory() . '/inc/widgets/facebook.php';
 require get_template_directory() . '/inc/widgets/twitter.php';
 require get_template_directory() . '/template-parts/frontpage-parts/featured-functions.php';
+require get_template_directory() . '/template-parts/frontpage-parts/banner-functions.php';

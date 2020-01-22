@@ -14,7 +14,7 @@ if(is_singular()){
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header pb-3">
-		<h5 class="category pt-2"><?php the_category(); ?></h5>
+		<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		<?php
 			the_title( '<h2 class="entry-title pb-1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 

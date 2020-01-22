@@ -72,11 +72,32 @@ $wp_customize->add_setting('show_main_news',
 
 $wp_customize->add_control('show_main_news',
     array(
-        'label'    => esc_html__('Enable Main Banner Slider', 'webnews'),
+        'label'    => esc_html__('Enable Main Banner', 'webnews'),
         'section'  => 'frontpage_main_banner_settings',
         'type'     => 'checkbox',
-        'priority' => 22,
+        'priority' => 1,
+    )
+);
 
+$wp_customize->add_setting('frontpage_banner_style',
+    array(
+        'default'           => 'banner-01',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'webnews_sanitize_select',
+    )
+);
+
+$wp_customize->add_control( 'frontpage_banner_style',
+    array(
+        'label'       => esc_html__('Banner Style', 'webnews'),
+        'section'     => 'frontpage_main_banner_settings',
+        'type'        => 'select',
+        'choices'               => array(
+            'banner-01' => esc_html__( 'Banner 01', 'webnews' ),
+            'banner-02' => esc_html__( 'Banner 02', 'webnews' ),
+            'banner-03' => esc_html__( 'Banner 03', 'webnews' )
+        ),
+        'priority'    => 2,
     )
 );
 
@@ -93,7 +114,7 @@ $wp_customize->add_control('main_news_slider_title',
         'label'    => esc_html__('Main Story Slider Title', 'webnews'),
         'section'  => 'frontpage_main_banner_settings',
         'type'     => 'text',
-        'priority' => 23,
+        'priority' => 3,
         'active_callback' => 'webnews_main_banner_status'
 
     )
@@ -114,7 +135,7 @@ $wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'selec
         'section'     => 'frontpage_main_banner_settings',
         'type'        => 'dropdown-taxonomies',
         'taxonomy'    => 'category',
-        'priority'    => 23,
+        'priority'    => 3,
         'active_callback' => 'webnews_main_banner_status'
     )));
 
@@ -132,7 +153,7 @@ $wp_customize->add_control('trending_title',
         'label'    => esc_html__("Trending Title", 'webnews'),
         'section'  => 'frontpage_main_banner_settings',
         'type'     => 'text',
-        'priority' => 23,
+        'priority' => 4,
         'active_callback' => 'webnews_main_banner_status'
 
     )
@@ -153,7 +174,7 @@ $wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'selec
         'section'     => 'frontpage_main_banner_settings',
         'type'        => 'dropdown-taxonomies',
         'taxonomy'    => 'category',
-        'priority'    => 23,
+        'priority'    => 4,
         'active_callback' => 'webnews_main_banner_status'
     )));
 
@@ -185,10 +206,30 @@ $wp_customize->add_control('show_featured_news',
         'label'    => esc_html__('Enable Featured New', 'webnews'),
         'section'  => 'frontpage_featured_news_settings',
         'type'     => 'checkbox',
-        'priority' => 24,
+        'priority' => 1,
+    )
+);
+$wp_customize->add_setting('frontpage_featured_style',
+    array(
+        'default'           => 'featured-01',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'webnews_sanitize_select',
     )
 );
 
+$wp_customize->add_control( 'frontpage_featured_style',
+    array(
+        'label'       => esc_html__('Featured Style', 'webnews'),
+        'section'     => 'frontpage_featured_news_settings',
+        'type'        => 'select',
+        'choices'               => array(
+            'featured-01' => esc_html__( 'Featured 01', 'webnews' ),
+            'featured-02' => esc_html__( 'Featured 02', 'webnews' ),
+            'featured-03' => esc_html__( 'Featured 03', 'webnews' )
+        ),
+        'priority'    => 2,
+    )
+);
 $wp_customize->add_setting('featured_news_title',
     array(
         'default'           => __('Featured Story', 'webnews'),
@@ -202,7 +243,7 @@ $wp_customize->add_control('featured_news_title',
         'label'    => esc_html__('Featured Posts Title', 'webnews'),
         'section'  => 'frontpage_featured_news_settings',
         'type'     => 'text',
-        'priority' => 24,
+        'priority' => 3,
         'active_callback' => 'webnews_featured_news_status'
     )
 );
@@ -222,7 +263,7 @@ $wp_customize->add_control(new Dropdown_Taxonomies_Control($wp_customize, 'selec
         'section'     => 'frontpage_featured_news_settings',
         'type'        => 'dropdown-taxonomies',
         'taxonomy'    => 'category',
-        'priority'    => 24,
+        'priority'    => 3,
         'active_callback' => 'webnews_featured_news_status'
     )));
 

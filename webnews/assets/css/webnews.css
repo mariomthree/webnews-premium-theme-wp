@@ -25,6 +25,55 @@
 .text-collgray{
 	color: #e7e7e7;
 }
+.bg-facebook{
+	background-color: #3b5998;
+}
+.facebook:hover {
+ color:#3b5998;	
+}
+.bg-googleplus{
+	background-color: #dd4b39;
+}
+.googleplus:hover {
+ color:#dd4b39;
+}
+.bg-twitter{
+	background-color: #00aced;
+}
+.twitter:hover {
+ color:#00aced;
+}
+.instagram:hover {
+ color:#517fa4;
+}
+.bg-pinterest{
+	background-color: #cb2027;
+}
+.pinterest:hover {
+ color:#cb2027;
+}
+.skype:hover {
+ color:#0078ca;
+}
+.vimeo:hover {
+ color:#aad450;
+}
+.youtube:hover {
+ color:#bb0000;
+}
+.dribbble:hover {
+ color:#ea4c89;
+}
+.bg-linkedin{
+	background-color: #007bb6;
+}
+.linkedin:hover {
+ color:#007bb6;
+}
+.rss:hover {
+ color:#FF9900;
+}
+
 /*
 	Header
 	--------------------------------------------
@@ -131,120 +180,30 @@
 	font-size: 35px;
 	color: #1b4871;
 }
-.bg-facebook{
-	background-color: #3b5998;
-}
-.facebook:hover {
- color:#3b5998;	
-}
-.bg-googleplus{
-	background-color: #dd4b39;
-}
-.googleplus:hover {
- color:#dd4b39;
-}
-.bg-twitter{
-	background-color: #00aced;
-}
-.twitter:hover {
- color:#00aced;
-}
-.instagram:hover {
- color:#517fa4;
-}
-.bg-pinterest{
-	background-color: #cb2027;
-}
-.pinterest:hover {
- color:#cb2027;
-}
-.skype:hover {
- color:#0078ca;
-}
-.vimeo:hover {
- color:#aad450;
-}
-.youtube:hover {
- color:#bb0000;
-}
-.dribbble:hover {
- color:#ea4c89;
-}
-.bg-linkedin{
-	background-color: #007bb6;
-}
-.linkedin:hover {
- color:#007bb6;
-}
-.rss:hover {
- color:#FF9900;
-}
-
-/*
-	Footer
-	--------------------------------------------
-*/
-.site-footer{
-	background-color: #e7e7e7;
-}
-.site-footer  ul.pages{
-	margin: 0;
-	padding: 0;
-}
-.site-footer .site-info{
-	padding: 20px 50px;
-	background-color: #1b4871;
-}
-
-.site-info,
-.site-info a{
-	text-align: left;
-	color: black;
-}
 
 /*
 	Main Banner
-	-----------------------------------------------
+	------------------------------------------------------
 */
 
-h5.category ul{
-	list-style: none;
-  margin: 0;
-	padding: 0;
+.bar-treding-two{
+	display: none;
 }
 
-h5.category li {
-	display: inline-block;
-	padding: 5px;
-	background-color: black;
-	border-radius: 6px;
+@media screen and (max-width:770px){
+	.bar-treding-one{
+		display: none;
+	}
+	.bar-treding-two{
+		display: block;
+	}
 }
 
-h5.category a{
-	color: white;
-	padding: 8px;
-	font-weight: lighter;
-	font-size: 16px;
-}
-
-h5.category.treding li{
-	font-size: 16px;
-	padding-top: 2px;
-}
-.entry-meta h5 {
-	font-size: 16px;
-	font-weight: lighter;
-}
-.entry-meta i{
-	padding-left: 1rem;
-}
-.entry-meta i:nth-of-type(1){
-	padding-left: 0;
-}
 /*
 	Featured Story
 	------------------------------------------------------
 */
+
 .moreCategory{
 	padding-left: 5px;
 	padding-right: 5px;
@@ -268,31 +227,34 @@ h5.category.treding li{
 	background-color: #e7e7e7;
 	border-bottom: none;
 }
-.meta-slim h5{
-	position: absolute;
-	top: 20px;
-	left: 5%;
-	right: 5%;
-	font-size: 15px;
-	color: white;
+div.featured_03:nth-of-type(2){
+	margin-bottom: 42px;
 }
-@media screen and (max-width:360px){
-	.meta-slim.frontpage,
-	.entry-meta.frontpage{
-		display: none;
-	}
+/*
+	Post Meta - Widget
+	-----------------------------------------------
+*/
+
+.categorys a{
+	color:white;
+	padding: 5px;
+	font-size: 17px;
+	margin-right: 10px;
+	border-radius: 3px;
+	font-weight: lighter;
 }
-@media screen and (max-width:400px){
-	.ml-6rem{
-		margin-left: 2.8rem;
-	}
+
+.entry-meta h5 {
+	font-size: 16px;
+	font-weight: lighter;
 }
-div.fita span{
-  display: inline-block;
-  width: 60px;
-  height: 2.2px;
-  background-color: #1b4871e6;
+.entry-meta i{
+	padding-left: 1rem;
 }
+.entry-meta i:nth-of-type(1){
+	padding-left: 0;
+}
+
 .entry-footer{
 	padding-top: 10px;
 	border-bottom: 1px solid #f3f3f3;
@@ -320,4 +282,47 @@ div.fita span{
 }
 .share i{
 	font-size: 20px;
+}
+div.fita span{
+  display: inline-block;
+  width: 60px;
+  height: 2.2px;
+  background-color: #1b4871e6;
+}
+
+.meta-slim h5{
+	position: absolute;
+	top: 20px;
+	left: 5%;
+	right: 5%;
+	font-size: 15px;
+	color: white;
+}
+@media screen and (max-width:360px){
+	.meta-slim.frontpage,
+	.entry-meta.frontpage{
+		display: none;
+	}
+}
+
+/*
+	Footer
+	--------------------------------------------
+*/
+.site-footer{
+	background-color: #e7e7e7;
+}
+.site-footer  ul.pages{
+	margin: 0;
+	padding: 0;
+}
+.site-footer .site-info{
+	padding: 20px 50px;
+	background-color: #1b4871;
+}
+
+.site-info,
+.site-info a{
+	text-align: left;
+	color: black;
 }

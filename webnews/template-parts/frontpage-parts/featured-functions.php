@@ -1,16 +1,17 @@
 <?php  
 
-	function featured_full(){
-	    $all_categorys = get_categories();
-		$category = get_theme_mod('select_featured_news_category');
-		$all_posts = webnews_get_posts(8, $category);
-	    if ($all_posts->have_posts()):
+	function featured_01(){
+
+		$category = get_theme_mod('select_featured_news_category',0);
+		$posts_featured = webnews_get_posts(8, $category);
+	    
+	    if ($posts_featured->have_posts()):
 		?>
 			<div class="row">
 	            <?php  
 	                $i = 0;
-	                while ($all_posts->have_posts() && $i < 1) : 
-	                    $all_posts->the_post();
+	                while ($posts_featured->have_posts() && $i < 1) : 
+	                    $posts_featured->the_post();
 	                    if (has_post_thumbnail()) {
 	                        $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
 	                    } else {
@@ -24,55 +25,23 @@
 	                <?php } ?>
 	                         
 	                <div class="carousel-caption d-md-block text-left">
-	                      <h5 class="category text-white"><?php the_category(); ?></h5>
-	                      <h5>
-	                        <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-	                      </h5>
 	                      <div class="entry-meta frontpage">
 	                        <?php webnews_entry_meta(); ?>
 	                      </div>    
 	                </div>
 	            </div>
-	            <?php
-	                $i++;
-	                wp_reset_postdata();
-	                endwhile;
-	            ?>
-
-	            <div class="col-md-7 mb-5">
-	                <?php  
-	                    $i = 0;
-	                    while ($all_posts->have_posts() && $i < 2) : 
-	                        $all_posts->the_post();
-	                        if (has_post_thumbnail()) {
-	                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-	                        } else {
-	                            $url = '';
-	                        } 
-	                ?>
-	                <div class="row row-adjust my-3">
-	                    <div class="col-md-4 filter">
-	                        <div class="meta-slim slim frontpage">
-	                           <?php echo webnews_entry_meta('date'); ?>
-	                        </div>
-	                        <?php if ($url) ?>
-	                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">  
-	                    </div>
-	                    <div class="col-md-8">
-	                      <h5 class="pt-3">
-	                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
-	                      </h5>
-	                        <h5 class="category treding text-white pt-2"><?php the_category(); ?></h5>
-	                        <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,120).' [...]'; ?></p>
-	                    </div>
-	                </div>
-	                <?php
+	            <div class="col-xl-7 col-md-7 col-sm-12 mb-5">
+                      <h5>
+                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+                      </h5>
+                        <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+                        <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,600).' [...]'; ?></p>
+	            </div>  
+	            	<?php
 	                    $i++;
 	                    wp_reset_postdata();
 	                    endwhile;
-	                ?>
-	            </div>                 
-
+	                ?>               
 		    </div>
 
 		    <div class="row">
@@ -80,31 +49,34 @@
 		            <div class="row">
 		                <?php
 		                    $i = 0;
-		                    while ($all_posts->have_posts() && $i < 4):
-		                        $all_posts->the_post();
+		                    while ($posts_featured->have_posts() && $i < 4):
+		                        $posts_featured->the_post();
 		                        if (has_post_thumbnail()) {
 		                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
 		                        } else {
 		                            $url = '';
 		                        }
 		                ?>
-		                <div class="col-lg-3 col-md-3 col-sm-12">
-		                    <div class="card" style="width: 100%; border-color: transparent;">
-		                        <div class="meta-slim frontpage">
-		                            <?php echo webnews_entry_meta('date'); ?>
-		                        </div>
-		                        <?php if ($url) ?>
-		                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-		                        <div class="card-body">
-		                            <h5 class="category treding text-white">
-		                                <?php the_category(); ?>
-		                            </h5>
-		                            <h5 class="card-title">
-		                                <a href="<?php the_permalink(); ?>" class="text-dark">
-		                                    <?php the_title(); ?> </a>
-		                            </h5>
-		                        </div>
-		                    </div>
+		                <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+		                	<?php
+	                    	if ($url) { ?>
+	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+			                <?php } ?>
+			                         
+			                <div class="carousel-caption d-md-block text-left">
+			                      <div class="entry-meta frontpage">
+			                        <?php echo webnews_entry_meta(); ?>
+			                      </div>    
+			                </div>
+		                </div>
+		                <div class="col col-md-3 col-sm-12">
+		                	<div class="d-block">
+			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+			                      <h5>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                      </h5>
+			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
+			                </div>
 		                </div>
 		                <?php
 		                    $i++;
@@ -117,196 +89,288 @@
 
 	    <?php
 		endif;	
+	}
+
+	function featured_02(){
+
+		$category = get_theme_mod('select_featured_news_category',0);
+		$posts_featured = webnews_get_posts(8, $category);
+	    
+	    if ($posts_featured->have_posts()):
+		?>
+			<div class="row">
+	            <?php  
+	                $i = 0;
+	                while ($posts_featured->have_posts() && $i < 3) : 
+	                    $posts_featured->the_post();
+	                    if (has_post_thumbnail()) {
+	                        $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+	                    } else {
+	                        $url = '';
+	                    } 
+	            ?>
+	            <div class="col-xl-4 col-md-6 col-sm-12 mb-5">
+	                <?php
+	                    if ($url) { ?>
+	                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+	                <?php } ?>
+	                         
+	                <div class="carousel-caption d-md-block text-left">
+	                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+	                	<h5>
+                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+                      	</h5>
+	                    <div class="entry-meta frontpage">
+	                      <?php webnews_entry_meta(); ?>
+	                    </div>    
+	                </div>
+	            </div>  
+	            	<?php
+	                    $i++;
+	                    wp_reset_postdata();
+	                    endwhile;
+	                ?>               
+		    </div>
+
+		    <div class="row">
+		        <div class="col-sm-12 col-md-12 col-xl-12">
+		            <div class="row">
+		                <?php
+		                    $i = 0;
+		                    while ($posts_featured->have_posts() && $i < 4):
+		                        $posts_featured->the_post();
+		                        if (has_post_thumbnail()) {
+		                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+		                        } else {
+		                            $url = '';
+		                        }
+		                ?>
+		                <div class="col-xl-3 col-md-3 col-sm-12 mb-4">
+		                	<?php
+	                    	if ($url) { ?>
+	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+			                <?php } ?>
+			                         
+			                <div class="carousel-caption d-md-block text-left">
+			                      <div class="entry-meta frontpage">
+			                        <?php echo webnews_entry_meta(); ?>
+			                      </div>    
+			                </div>
+		                </div>
+		                <div class="col-xl-3 col-md-3 col-sm-12">
+		                	<div class="d-block">
+			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+			                      <h5>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                      </h5>
+			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
+			                </div>
+		                </div>
+		                <?php
+		                    $i++;
+		                    endwhile;
+		                    wp_reset_postdata();
+		                ?>
+		            </div>
+		        </div>
+		    </div>
+
+	    <?php
+		endif;	
+	}
 	
-	}
+	function featured_03(){
 
-	function featured_sidebar_left(){
-		$all_categorys = get_categories();
-		$category = get_theme_mod('select_featured_news_category');
-		$all_posts = webnews_get_posts(8, $category);
-		if ($all_posts->have_posts()) :
-      ?>
-
-      	<div class="row">
-      	 	<div class="col-sm-12 col-md-3 col-lg-3">
-	            <aside id="secondary" class="widget-area">
-	                <?php dynamic_sidebar( 'sidebar-1' ); ?>
-	            </aside><!-- #secondary -->
-	        </div>
-                    
-	        <div class="col-sm-12 col-md-9 col-lg-9">
+		$category = get_theme_mod('select_featured_news_category',0);
+		$posts_featured = webnews_get_posts(8, $category);
+	    
+	    if ($posts_featured->have_posts()):
+		?>
+			<div class="row">
 	            <?php  
 	                $i = 0;
-	                while ($all_posts->have_posts() && $i < 2) : 
-	                    $all_posts->the_post();
+	                while ($posts_featured->have_posts() && $i < 1) : 
+	                    $posts_featured->the_post();
 	                    if (has_post_thumbnail()) {
 	                        $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
 	                    } else {
 	                        $url = '';
 	                    } 
 	            ?>
-	            <div class="row row-adjust mb-5">
-	                <div class="col-md-5">
-	                    <?php if ($url) ?>
-	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-                	   	<div class="carousel-caption d-md-block text-left">
-                      	 <div class="entry-meta frontpage">
-           					<?php webnews_entry_meta(); ?>
-       					  </div>	
-				        </div>
-	                </div>
-	                <div class="col-md-7">
-	                  <h5 class="pt-3">
-	                    <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
-	                  </h5>
-	                    <h5 class="category treding text-white pt-2"><?php the_category(); ?></h5>
-	                    <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,335).' [...]'; ?></p>
+	            <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
+	                <?php
+	                    if ($url) { ?>
+	                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+	                <?php } ?>
+	                         
+	                <div class="carousel-caption d-md-block text-left"> 
+                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+	                      <h5>
+                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+                      	  </h5>
+                      	  <div class="entry-meta frontpage">
+	                        <?php webnews_entry_meta(); ?>
+	                      </div> 
 	                </div>
 	            </div>
 	            <?php
-	                $i++;
-	                    endwhile;
-	                ?>
-
-	            <div class="row">
-	                <?php
-	                    $i = 0;
-	                    while ($all_posts->have_posts() && $i < 3):
-	                        $all_posts->the_post();
-
-	                        if (has_post_thumbnail()) {
-	                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-	                        } else {
-	                            $url = '';
-	                        }
-	                ?>
-	                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-	                    <div class="card" style="width: 100%; border-color: transparent;">
-	                        <div class="meta-slim frontpage">
-	                                <?php echo webnews_entry_meta('date'); ?>
-	                        </div>
-	                        <?php if ($url) ?>
-	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                            <div class="card-body">
-	                                <h5 class="category treding text-white">
-	                                    <?php the_category(); ?>    
-	                                </h5>
-	                                <h5 class="card-title">
-	                                    <a href="<?php the_permalink(); ?>" class="text-dark"><?php the_title(); ?> </a>
-	                                </h5>
-	                            </div>
-	                        </div>
-	                </div>
-	                <?php
 	                    $i++;
-	                    endwhile;
 	                    wp_reset_postdata();
-	                ?>
-	            </div>
+	                    endwhile;
+	            ?> 
+	            <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
+             		<div class="row">
+             			<?php  
+			                $i = 0;
+			                while ($posts_featured->have_posts() && $i < 2) : 
+			                    $posts_featured->the_post();
+			                    if (has_post_thumbnail()) {
+			                        $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+			                    } else {
+			                        $url = '';
+			                    } 
+			            ?>
 
-	        </div>
+             			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
+		             		<?php
+			                    if ($url) { ?>
+			                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+			                <?php } ?>
+	                         
+			                <div class="carousel-caption d-md-block text-left">
+			                      <div class="entry-meta frontpage">
+			                        <?php webnews_entry_meta(); ?>
+			                      </div>  
+			                </div>
+             			</div>
+             			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
+             				   <h5>
+		                        	<a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+		                      	  </h5>
+		                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+             				 <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,130).' [...]'; ?></p>
+             			</div>
+	         
+		            	<?php
+		                    $i++;
+		                    wp_reset_postdata();
+		                    endwhile;
+		                ?>               
+		   		 	</div>
+		   		</div>
+		   	</div>
+		    <div class="row">
+		        <div class="col-xl-12 col-md-12 col-sm-12">
+		            <div class="row">
+		                <?php
+		                    $i = 0;
+		                    while ($posts_featured->have_posts() && $i < 4):
+		                        $posts_featured->the_post();
+		                        if (has_post_thumbnail()) {
+		                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+		                        } else {
+		                            $url = '';
+		                        }
+		                ?>
+		                <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+		                	<?php
+	                    	if ($url) { ?>
+	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+			                <?php } ?>
+			                         
+			                <div class="carousel-caption d-md-block text-left">
+			                      <div class="entry-meta frontpage">
+			                        <?php echo webnews_entry_meta(); ?>
+			                      </div>    
+			                </div>
+		                </div>
+		                <div class="col col-md-3 col-sm-12">
+		                	<div class="d-block">
+			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+			                      <h5>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                      </h5>
+			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
+			                </div>
+		                </div>
+		                <?php
+		                    $i++;
+		                    endwhile;
+		                    wp_reset_postdata();
+		                ?>
+		            </div>
+		        </div>
+		    </div>
 
-    	</div>
-
-        <?php
-      endif;
+	    <?php
+		endif;	
 	}
 
+	function featured_sidebar($sidebar){
 
-	function featured_sidebar_right(){
-		$all_categorys = get_categories();
-		$category = get_theme_mod('select_featured_news_category');
-		$all_posts = webnews_get_posts(8, $category);
-      if ($all_posts->have_posts()) :
-      ?>
-
-      	<div class="row">
-                    
-	        <div class="col-sm-12 col-md-9 col-lg-9">
-	            <?php  
-	                $i = 0;
-	                while ($all_posts->have_posts() && $i < 2) : 
-	                    $all_posts->the_post();
-	                    if (has_post_thumbnail()) {
-	                        $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-	                    } else {
-	                        $url = '';
-	                    } 
-	            ?>
-	            <div class="row row-adjust mb-5">
-	                <div class="col-md-5">
-	                    <?php if ($url) ?>
-	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                      	<div class="carousel-caption d-md-block text-left">
-	                      	 <div class="entry-meta frontpage">
-	           					<?php webnews_entry_meta(); ?>
-	       					  </div>	
-					        </div>
-
-	                </div>
-	                <div class="col-md-7">
-	                  <h5 class="pt-3">
-	                    <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
-	                  </h5>
-	                    <h5 class="category treding text-white pt-2"><?php the_category(); ?></h5>
-	                    <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,335).' [...]'; ?></p>
-	                </div>
-	            </div>
-	            <?php
-	                $i++;
-	                    endwhile;
-	                ?>
-
-	            <div class="row">
-	                <?php
-	                    $i = 0;
-	                    while ($all_posts->have_posts() && $i < 3):
-	                        $all_posts->the_post();
-
-	                        if (has_post_thumbnail()) {
-	                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-	                        } else {
-	                            $url = '';
-	                        }
-	                ?>
-	                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-	                    <div class="card" style="width: 100%; border-color: transparent;">
-	                        <div class="meta-slim frontpage">
-	                                <?php echo webnews_entry_meta('date'); ?>
-	                        </div>
-	                        <?php if ($url) ?>
-	                        <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                            <div class="card-body">
-	                                <h5 class="category treding text-white">
-	                                    <?php the_category(); ?>
-	                                        
-	                                </h5>
-	                                <h5 class="card-title">
-	                                    <a href="<?php the_permalink(); ?>" class="text-dark"><?php the_title(); ?> </a>
-	                                </h5>
-	                            </div>
-	                        </div>
-	                </div>
-	                <?php
-	                    $i++;
-	                    endwhile;
-	                    wp_reset_postdata();
-	                ?>
-	            </div>
-
-	        </div>
-
-	        <div class="col-sm-12 col-md-3 col-lg-3">
-	            <aside id="secondary" class="widget-area">
-	                <?php dynamic_sidebar( 'sidebar-1' ); ?>
-	            </aside><!-- #secondary -->
-	        </div>
-
-    	</div>
-
-        <?php
-      endif;
-
+		$category = get_theme_mod('select_featured_news_category',0);
+		$posts_featured = webnews_get_posts(8, $category);
+	    
+	    if ($posts_featured->have_posts()):
+		?>
+			<div class="row">
+               	<?php if($sidebar == 'sidebar-left'): ?>
+               	<div class="col-xl-4 col-md-4 col-sm-12">
+		    		<?php dynamic_sidebar('sidebar-1'); ?>
+		    	</div>
+		    	<?php endif ?>
+		
+		        <div class="col-xl-8 col-md-8 col-sm-12">
+		            <div class="row">
+		                <?php
+		                    $i = 0;
+		                    while ($posts_featured->have_posts() && $i < 5):
+		                        $posts_featured->the_post();
+		                        if (has_post_thumbnail()) {
+		                            $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+		                        } else {
+		                            $url = '';
+		                        }
+		                ?>
+		                <div class="col-xl-4 col-md-4 col-sm-12 mb-4">
+		                	<?php
+	                    	if ($url) { ?>
+	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+			                <?php } ?>
+			                         
+			                <div class="carousel-caption d-md-block text-left">
+			                      <div class="entry-meta frontpage">
+			                        <?php echo webnews_entry_meta(); ?>
+			                      </div>    
+			                </div>
+		                </div>
+		                <div class="col-xl-8 col-md-8 col-sm-12">
+		                	<div class="d-block">
+			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+			                      <h5>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                      </h5>
+			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,140).' [...]'; ?></p>
+			                </div>
+		                </div>
+		                <?php
+		                    $i++;
+		                    endwhile;
+		                    wp_reset_postdata();
+		                ?>
+		            </div>
+		        </div>
+		    
+				<?php if($sidebar == 'sidebar-right'): ?>				
+		    	<div class="col-xl-4 col-md-4 col-sm-12">
+		    		<?php dynamic_sidebar('sidebar-1'); ?>
+		    	</div>
+		    	<?php endif ?>
+		    
+		    </div>
+	    <?php
+		endif;	
 	}
+
 
 

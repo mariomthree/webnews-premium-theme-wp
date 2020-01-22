@@ -15,7 +15,7 @@
 	</div>
 
 	<header class="entry-header">
-		<h5 class="category pt-2"> <?php the_category(); ?> </h5>
+		<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		<?php
 			the_title( '<h1 class="entry-title">', '</h1>' );
 

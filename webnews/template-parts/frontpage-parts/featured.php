@@ -1,5 +1,5 @@
 <?php
-    $featured_title = get_theme_mod('featured_news_title');
+    $featured_title = get_theme_mod('featured_news_title','Featured Story');
 ?>
     <!-- featured -->
     <section class="p-2">
@@ -23,14 +23,18 @@
                 <div class="container-fluid">
                     <?php  
                     
-                        if (get_theme_mod('frontpage_position_sidebar') == 'sidebar-none') {
-                           featured_full();
-                        }elseif (get_theme_mod('frontpage_position_sidebar') == 'sidebar-left') {
-                           featured_sidebar_left();
-                        }elseif (get_theme_mod('frontpage_position_sidebar') == 'sidebar-right') {
-                           featured_sidebar_right();
+                        if (get_theme_mod('frontpage_position_sidebar','sidebar-none') == 'sidebar-none') {
+                            if (get_theme_mod('frontpage_featured_style') == 'featured-01') {
+                                featured_01();
+                            } elseif (get_theme_mod('frontpage_featured_style') == 'featured-02') {
+                                featured_02();
+                            } elseif (get_theme_mod('frontpage_featured_style','featured-03') == 'featured-03') {
+                                featured_03();
+                            }
+                        }elseif (get_theme_mod('frontpage_position_sidebar')) {
+                           featured_sidebar(get_theme_mod('frontpage_position_sidebar'));
                         }
-              
+
                     ?>
                 </div>
                 <!--end of featured-post -->

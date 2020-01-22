@@ -1,5 +1,5 @@
 <?php  
-	$latest_title  = get_theme_mod('frontpage_latest_posts_title');
+	$latest_title  = get_theme_mod('frontpage_latest_posts_title','You may have missed');
 	$all_posts 	   = webnews_get_posts(5);
 ?>
     <!-- latest -->
@@ -42,7 +42,7 @@
 			                <?php } ?>
 			                         
 			                <div class="carousel-caption d-md-block text-left">
-			                      <h5 class="category treding text-white"><?php the_category(); ?></h5>
+                                <div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
 			                        <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 			                      </h5>
