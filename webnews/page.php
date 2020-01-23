@@ -51,7 +51,7 @@ get_header();
 							endwhile; // End of the loop.
 						?>
 					</div>
-							<?php if (get_theme_mod('blog_sidebar_position') == 'right') : ?>
+							<?php if (get_theme_mod('blog_sidebar_position','right') == 'right') : ?>
 					<div class="col-xl-4 col-md-4 col-sm-12">
 						<?php get_sidebar(); ?>
 					</div>

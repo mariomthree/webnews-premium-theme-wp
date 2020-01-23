@@ -18,6 +18,7 @@ $wp_customize->add_panel('theme_option_panel',
 );
 
 // Breadcrumb #1
+/*
 $wp_customize->add_section('site_breadcrumb_settings',
     array(
         'title'      => esc_html__('Breadcrumb Options', 'webnews'),
@@ -43,7 +44,7 @@ $wp_customize->add_control('enable_breadcrumb',
         'priority' => 10,
     )
 );
-
+*/
 //End of Breadcrumb
 
 //Blog Sidebar #1

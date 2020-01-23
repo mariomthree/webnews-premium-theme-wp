@@ -16,7 +16,7 @@
 		
 		if(get_theme_mod('footer_num_column_style')  == 'column-four')
 			get_template_part('template-parts/footer/footer-four');
-		elseif( get_theme_mod('footer_num_column_style')  == 'column-three')
+		elseif( get_theme_mod('footer_num_column_style','column-three')  == 'column-three')
 			get_template_part('template-parts/footer/footer-three');
 		elseif( get_theme_mod('footer_num_column_style')  == 'column-hidden')
 			//Do not include nothing

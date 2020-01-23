@@ -28,19 +28,20 @@
 .bg-facebook{
 	background-color: #3b5998;
 }
-.facebook:hover {
- color:#3b5998;	
+.facebook i:hover {
+  color:#3b5998;	
 }
+
 .bg-googleplus{
 	background-color: #dd4b39;
 }
-.googleplus:hover {
+.googleplus i:hover {
  color:#dd4b39;
 }
 .bg-twitter{
 	background-color: #00aced;
 }
-.twitter:hover {
+.twitter i:hover {
  color:#00aced;
 }
 .instagram:hover {
@@ -49,16 +50,16 @@
 .bg-pinterest{
 	background-color: #cb2027;
 }
-.pinterest:hover {
+.pinterest i:hover {
  color:#cb2027;
 }
-.skype:hover {
+.skype i:hover {
  color:#0078ca;
 }
-.vimeo:hover {
+.vimeo i:hover {
  color:#aad450;
 }
-.youtube:hover {
+.youtube i:hover {
  color:#bb0000;
 }
 .dribbble:hover {
@@ -67,10 +68,10 @@
 .bg-linkedin{
 	background-color: #007bb6;
 }
-.linkedin:hover {
+.linkedin i:hover {
  color:#007bb6;
 }
-.rss:hover {
+.rss i:hover {
  color:#FF9900;
 }
 

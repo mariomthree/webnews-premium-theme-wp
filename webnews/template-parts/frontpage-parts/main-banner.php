@@ -6,7 +6,7 @@
  *
  */
 	
-	$banner_style = get_theme_mod('frontpage_banner_style');
+	$banner_style = get_theme_mod('frontpage_banner_style','banner-01');
 ?>
 
 		<!-- main banner -->

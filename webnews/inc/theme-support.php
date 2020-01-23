@@ -72,7 +72,7 @@ function color_field_edit_category( $term ) {
 add_action( 'category_edit_form_fields', 'color_field_edit_category' );
 
 //functions for save categorys color
-function save_termmeta( $term_id ) {
+function save_term_meta( $term_id ) {
     if( isset( $_POST['category_color'] ) && ! empty( $_POST['category_color'] ) ) {
         update_term_meta( $term_id, 'category_color', sanitize_hex_color_no_hash( $_POST['category_color'] ) );
     } else {
@@ -80,8 +80,8 @@ function save_termmeta( $term_id ) {
     }
 }
 
-add_action( 'created_category', 'save_termmeta' ); 
-add_action( 'edited_category',  'save_termmeta' );
+add_action( 'created_category', 'save_term_meta' ); 
+add_action( 'edited_category',  'save_term_meta' );
 
 function category_color_enqueue( $taxonomy ) {
     if( null !== ( $screen = get_current_screen() ) && 'edit-category' !== $screen->id ) {
