@@ -1,17 +1,17 @@
 <?php
 /**
- * WebNews Widget of Contact info
+ * webnews Widget of Contact info
  *
  *
- * @package WebNews
+ * @package webnews
  */
 
     class social_links extends WP_Widget {
         
         public function __construct() {
 
-            $widget_ops = array('classname' => 'social_links', 'description' => esc_html__('Displays your social profile.', 'WebNews'));
-            parent::__construct(false, esc_html__('M3: Social Links', 'WebNews'), $widget_ops);
+            $widget_ops = array('classname' => 'social_links', 'description' => esc_html__('Displays your social profile.', 'webnews'));
+            parent::__construct(false, esc_html__('M3: Social Links', 'webnews'), $widget_ops);
 
         }
 
@@ -88,9 +88,9 @@
         {
             extract($args);
             $title = apply_filters('widget_title', $instance['title']);
-            echo htmlspecialchars_decode(esc_html($before_widget));
+            echo wp_specialchars_decode(esc_html($before_widget));
             if ($title) {
-                echo htmlspecialchars_decode(esc_html($before_title . $title . $after_title));
+                echo wp_specialchars_decode(esc_html($before_title . $title . $after_title));
             }
             echo '<nav class="social-links-top">';
             echo '<ul>';
@@ -106,7 +106,7 @@
             }
             echo '</ul>';
             echo '</nav>';
-            echo htmlspecialchars_decode(esc_html($after_widget));
+            echo wp_specialchars_decode(esc_html($after_widget));
         }
 
         function update($new_instance, $old_instance)

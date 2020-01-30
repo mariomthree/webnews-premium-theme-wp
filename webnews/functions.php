@@ -1,10 +1,10 @@
 <?php
 /**
- * WebNews functions and definitions
+ * webnews functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WebNews
+ * @package webnews
  */
 
 if ( ! function_exists( 'webnews_setup' ) ) :
@@ -19,10 +19,16 @@ if ( ! function_exists( 'webnews_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on WebNews, use a find and replace
+		 * If you're building a theme based on webnews, use a find and replace
 		 * to change 'webnews' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'webnews', get_template_directory() . '/languages' );
+		
+		// This theme styles the visual editor with editor-style.css to match the theme style.
+		add_editor_style();
+
+		// Load regular editor styles into the new block-based editor.
+		add_theme_support( 'editor-styles' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -133,7 +139,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-        'name' => esc_html__('Content Header Right','WebNews'),
+        'name' => esc_html__('Content Header Right','webnews'),
         'id'   => 'header-right',
         'before_widget' => '<div id="%1$s" class="widget first %2$s">',
         'after_widget' => '</div>',
@@ -142,7 +148,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 1 Column 1','WebNews'),
+    	'name'	=> esc_html__('Footer 1 Column 1','webnews'),
     	'id'	=> 'footer-1-column-1',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -151,7 +157,7 @@ function webnews_widgets_init() {
     ));
     
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 1 Column 2','WebNews'),
+    	'name'	=> esc_html__('Footer 1 Column 2','webnews'),
     	'id'	=> 'footer-1-column-2',
     	'before_widget' => '<div id="%1$s" class=widget-footer "widget first %2$s">',
         'after_widget' => '</div>',
@@ -160,7 +166,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 1 Column 3','WebNews'),
+    	'name'	=> esc_html__('Footer 1 Column 3','webnews'),
     	'id'	=> 'footer-1-column-3',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -169,7 +175,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 1 Column 4','WebNews'),
+    	'name'	=> esc_html__('Footer 1 Column 4','webnews'),
     	'id'	=> 'footer-1-column-4',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -178,7 +184,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 2 Column 1','WebNews'),
+    	'name'	=> esc_html__('Footer 2 Column 1','webnews'),
     	'id'	=> 'footer-2-column-1',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -187,7 +193,7 @@ function webnews_widgets_init() {
     ));
 
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 2 Column 2','WebNews'),
+    	'name'	=> esc_html__('Footer 2 Column 2','webnews'),
     	'id'	=> 'footer-2-column-2',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -196,7 +202,7 @@ function webnews_widgets_init() {
     ));
     
     register_sidebar(array(
-    	'name'	=> esc_html__('Footer 2 Column 3','WebNews'),
+    	'name'	=> esc_html__('Footer 2 Column 3','webnews'),
     	'id'	=> 'footer-2-column-3',
     	'before_widget' => '<div id="%1$s" class="widget-footer widget first %2$s">',
         'after_widget' => '</div>',
@@ -229,7 +235,6 @@ function webnews_scripts() {
 	
 	wp_enqueue_style('opensans','https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600&display=swap');
 
-	wp_deregister_script('jquery');
 	wp_register_script('jquery', get_template_directory_uri(). '/js/jquery.js',false,'3.2.1',true);
 	wp_enqueue_script('jquery');
 

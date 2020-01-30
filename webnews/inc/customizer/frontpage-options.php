@@ -2,7 +2,7 @@
 /**
  * Frontpage options section
  *
- * @package WebNews
+ * @package webnews
  */
 require get_template_directory().'/inc/customizer/footer-options.php';
 

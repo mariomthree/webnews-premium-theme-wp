@@ -2,7 +2,7 @@
 /**
  * Footer options section
  *
- * @package WebNews
+ * @package webnews
  */
 
 # Footer Options Panel.

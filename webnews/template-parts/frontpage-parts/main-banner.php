@@ -2,7 +2,7 @@
 /**
  * Main Banner
  *
- * @package WebNews
+ * @package webnews
  *
  */
 	

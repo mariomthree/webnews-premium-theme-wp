@@ -1,12 +1,4 @@
 <?php
-/**
- * @package     wide
- * @version     1.0
- * @author      NanoAgency
- * @link        http://www.nanoagency.co
- * @copyright   Copyright (c) 2016 NanoAgency
- * @license     GPL v2
- */
 
 class twitter extends WP_Widget{
 

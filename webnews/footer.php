@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WebNews
+ * @package webnews
  */
 
 ?>
@@ -33,7 +33,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'webnews' ), 'webnews', '<a href="https://github.com/mariomtree/">Mario Manuel Mabande</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'webnews' ), 'webnews','Mario Manuel Mabande' );
 				}else{
 				?>
 				<p><?php echo get_theme_mod('footer_copyright'); ?></p>

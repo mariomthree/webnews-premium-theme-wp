@@ -2,7 +2,7 @@
 /**
  * Frontpage
  *
- * @package WebNews
+ * @package webnews
  *
  */
 

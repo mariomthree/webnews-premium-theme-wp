@@ -1,9 +1,9 @@
 <?php
 /**
- * WebNews Widget of Contact info
+ * webnews Widget of Contact info
  *
  *
- * @package WebNews
+ * @package webnews
  */
 
 class contact_info extends WP_Widget{

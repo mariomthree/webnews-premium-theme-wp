@@ -2,7 +2,7 @@
 /**
  * Customizer callback functions for active_callback.
  *
- * @package WebNews
+ * @package webnews
  */
 
 

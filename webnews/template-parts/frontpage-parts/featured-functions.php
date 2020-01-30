@@ -19,16 +19,18 @@
 	                    } 
 	            ?>
 	            <div class=" col-sm-12 col-lg-5 col-md-5 mb-5">
-	                <?php
+	            	<div class="img-center img-col-5">
+	            		<?php
 	                    if ($url) { ?>
-	                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                <?php } ?>
+	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+	                	<?php } ?>
 	                         
-	                <div class="carousel-caption d-md-block text-left">
-	                      <div class="entry-meta frontpage">
-	                        <?php webnews_entry_meta(); ?>
-	                      </div>    
-	                </div>
+		                <div class="carousel-caption d-md-block text-left">
+		                      <div class="entry-meta frontpage">
+		                        <?php webnews_entry_meta(); ?>
+		                      </div>    
+		                </div>
+		            </div>
 	            </div>
 	            <div class="col-xl-7 col-md-7 col-sm-12 mb-5">
                       <h5>
@@ -58,16 +60,18 @@
 		                        }
 		                ?>
 		                <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
-		                	<?php
-	                    	if ($url) { ?>
-	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-			                <?php } ?>
-			                         
-			                <div class="carousel-caption d-md-block text-left">
-			                      <div class="entry-meta frontpage">
-			                        <?php echo webnews_entry_meta(); ?>
-			                      </div>    
-			                </div>
+		                	<div class="img-center img-col-3-12">
+			                	<?php
+		                    	if ($url) { ?>
+		                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+				                <?php } ?>
+				                         
+				                <div class="carousel-caption d-md-block text-left">
+				                      <div class="entry-meta frontpage">
+				                        <?php echo webnews_entry_meta(); ?>
+				                      </div>    
+				                </div>
+			            	</div>
 		                </div>
 		                <div class="col col-md-3 col-sm-12">
 		                	<div class="d-block">
@@ -109,21 +113,23 @@
 	                        $url = '';
 	                    } 
 	            ?>
-	            <div class="col-xl-4 col-md-6 col-sm-12 mb-5">
-	                <?php
-	                    if ($url) { ?>
-	                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                <?php } ?>
-	                         
-	                <div class="carousel-caption d-md-block text-left">
-	                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-	                	<h5>
-                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-                      	</h5>
-	                    <div class="entry-meta frontpage">
-	                      <?php webnews_entry_meta(); ?>
-	                    </div>    
-	                </div>
+	            <div class="col-xl-4 col-md-4 col-sm-12 mb-5">
+	            	<div class="img-center img-col-4-12">
+		                <?php
+		                    if ($url) { ?>
+		                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+		                <?php } ?>
+		                         
+		                <div class="carousel-caption d-md-block text-left">
+		                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+		                	<h5>
+	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                      	</h5>
+		                    <div class="entry-meta frontpage">
+		                      <?php webnews_entry_meta(); ?>
+		                    </div>    
+		                </div>
+	            	</div>
 	            </div>  
 	            	<?php
 	                    $i++;
@@ -146,16 +152,18 @@
 		                        }
 		                ?>
 		                <div class="col-xl-3 col-md-3 col-sm-12 mb-4">
-		                	<?php
-	                    	if ($url) { ?>
-	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-			                <?php } ?>
-			                         
-			                <div class="carousel-caption d-md-block text-left">
-			                      <div class="entry-meta frontpage">
-			                        <?php echo webnews_entry_meta(); ?>
-			                      </div>    
-			                </div>
+		                	<div class="img-center img-col-3-12">
+			                	<?php
+		                    	if ($url) { ?>
+		                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+				                <?php } ?>
+				                         
+				                <div class="carousel-caption d-md-block text-left">
+				                      <div class="entry-meta frontpage">
+				                        <?php echo webnews_entry_meta(); ?>
+				                      </div>    
+				                </div>
+			            	</div>
 		                </div>
 		                <div class="col-xl-3 col-md-3 col-sm-12">
 		                	<div class="d-block">
@@ -198,20 +206,22 @@
 	                    } 
 	            ?>
 	            <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
-	                <?php
-	                    if ($url) { ?>
-	                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-	                <?php } ?>
-	                         
-	                <div class="carousel-caption d-md-block text-left"> 
-                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-	                      <h5>
-                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-                      	  </h5>
-                      	  <div class="entry-meta frontpage">
-	                        <?php webnews_entry_meta(); ?>
-	                      </div> 
-	                </div>
+	            	<div class="img-center img-col-6">
+		                <?php
+		                    if ($url) { ?>
+		                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+		                <?php } ?>
+		                         
+		                <div class="carousel-caption d-md-block text-left"> 
+	                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+		                      <h5>
+	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                      	  </h5>
+	                      	  <div class="entry-meta frontpage">
+		                        <?php webnews_entry_meta(); ?>
+		                      </div> 
+		                </div>
+	            	</div>
 	            </div>
 	            <?php
 	                    $i++;
@@ -232,17 +242,19 @@
 			            ?>
 
              			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
-		             		<?php
-			                    if ($url) { ?>
-			                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-			                <?php } ?>
-	                         
-			                <div class="carousel-caption d-md-block text-left">
-			                      <div class="entry-meta frontpage">
-			                        <?php webnews_entry_meta(); ?>
-			                      </div>  
-			                </div>
-             			</div>
+             				<div class="img-center img-col-6-6">
+			             		<?php
+				                    if ($url) { ?>
+				                    <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+				                <?php } ?>
+		                         
+				                <div class="carousel-caption d-md-block text-left">
+				                      <div class="entry-meta frontpage">
+				                        <?php webnews_entry_meta(); ?>
+				                      </div>  
+				                </div>
+	             				</div>
+             				</div>
              			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
              				   <h5>
 		                        	<a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
@@ -273,6 +285,7 @@
 		                        }
 		                ?>
 		                <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+		                	<div class="img-center img-col-3-12">
 		                	<?php
 	                    	if ($url) { ?>
 	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
@@ -283,6 +296,7 @@
 			                        <?php echo webnews_entry_meta(); ?>
 			                      </div>    
 			                </div>
+		                </div>
 		                </div>
 		                <div class="col col-md-3 col-sm-12">
 		                	<div class="d-block">

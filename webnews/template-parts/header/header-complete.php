@@ -1,8 +1,8 @@
 <?php  
 /**
- * WebNews Header with topbar left and right
+ * webnews Header with topbar left and right
  *
- * @package WebNews
+ * @package webnews
  */
  ?>	
 
@@ -14,22 +14,29 @@
 
 				<div class=" col-sm-12 col-md-7 col-lg-7  headerSectionTwo">
 					<div class="site-branding">
-						<?php
-						the_custom_logo();
-						if ( is_front_page() && is_home() ) :
+
+					<?php
+						$logo = get_custom_logo();
+						if ( $logo ) {
+							
+							echo $logo;
+						
+						}else{
+						
 							?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							  <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<?php
-						else :
-							?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-							<?php
-						endif;
-						$web_news_description = get_bloginfo( 'description', 'display' );
-						if ( $web_news_description || is_customize_preview() ) :
-							?>
-							<p class="site-description"><?php echo $web_news_description; /* WPCS: xss ok. */ ?></p>
-						<?php endif; ?>
+						
+							$web_news_description = get_bloginfo( 'description', 'display' );
+				 			
+				 			if ( $web_news_description || is_customize_preview() ) :
+								?>
+								<p class="site-description"><?php echo $web_news_description; /* WPCS: xss ok. */ ?></p>
+
+						<?php 
+							endif; 
+						}
+					?>
 					</div><!-- .site-branding -->
 				</div>
 

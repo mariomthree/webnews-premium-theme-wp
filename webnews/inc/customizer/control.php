@@ -2,7 +2,7 @@
 /**
  * Custom Customizer Controls.
  *
- * @package WebNews
+ * @package webnews
  */
 
 class Dropdown_Taxonomies_Control extends WP_Customize_Control {

@@ -27,52 +27,54 @@
 				<!-- slider -->
 				 <?php if ($posts_slider->have_posts()) : ?>
 				  <div id="carouselCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-				    	<div class="carousel-inner">
-				    	<?php
-				    		$i = 0;
-                            while ($posts_slider->have_posts()) : 
-                            	$posts_slider->the_post();
-                                if (has_post_thumbnail()) {
-                                    $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-                                    $active = $i == 0 ? 'active' : '';
-                                } else {
-                                    $url = '';
-                                }
-                        ?>
-				      	<div class="carousel-item <?php echo $active; ?>">
+  						<div class="img-center img-col-8">
+					    	<div class="carousel-inner">
+						    	<?php
+							    		$i = 0;
+			                            while ($posts_slider->have_posts()) : 
+			                            	$posts_slider->the_post();
+			                                if (has_post_thumbnail()) {
+			                                    $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+			                                    $active = $i == 0 ? 'active' : '';
+			                                } else {
+			                                    $url = '';
+			                                }
+			                        ?>
+							      	<div class="carousel-item <?php echo $active; ?>">
 
-				        <?php
-                            if ($url) { ?>
-                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-                        <?php } ?>
-                                 
-				        <div class="carousel-caption text-left">
-				          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-                          <h5>
-                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-				          </h5>
-						  <div class="entry-meta frontpage">
-           					<?php echo webnews_entry_meta(); ?>
-       					  </div>	
-				        </div>
+								        <?php
+				                            if ($url) { ?>
+				                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+				                        <?php } ?>
+				                                 
+								        <div class="carousel-caption text-left">
+								          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+				                          <h5>
+				                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+								          </h5>
+										  <div class="entry-meta frontpage">
+				           					<?php echo webnews_entry_meta(); ?>
+				       					  </div>	
+								        </div>
 
-				        </div>
-				    	
-				    	 <?php
-				    	 	$i++;
-                            endwhile;
-                            endif;
-                            wp_reset_postdata();
-                         ?>
-				  		</div>
-				    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
-				      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				      <span class="sr-only">Previous</span>
-				    </a>
-				    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
-				      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				      <span class="sr-only">Next</span>
-				    </a>
+							        </div>
+							    	
+							    	 <?php
+							    	 	$i++;
+			                            endwhile;
+			                            endif;
+			                            wp_reset_postdata();
+			                         ?>	
+					  		</div>
+						    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+						      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						      <span class="sr-only">Previous</span>
+						    </a>
+						    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+						      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						      <span class="sr-only">Next</span>
+						    </a>
+						</div>
 				  </div>
 
 				<!-- end of slider -->
@@ -104,22 +106,22 @@
                                 }
                        	?>
 						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+							<div class="img-center img-col-4-12">
+								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
-							<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
-
-							<div class="carousel-caption d-md-block text-left">
-								
-								<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-								<h5>
-	                                <a href="<?php the_permalink(); ?>" class="text-white">
-					            	 <?php the_title(); ?>
-					             	</a>
-				          		</h5>
-				          		
-				          		<div class="entry-meta frontpage">
-       								<?php echo webnews_entry_meta(); ?>
-   								</div>	
-
+								<div class="carousel-caption d-md-block text-left">
+									
+									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+									<h5>
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
+						            	 <?php the_title(); ?>
+						             	</a>
+					          		</h5>
+					          		
+					          		<div class="entry-meta frontpage">
+	       								<?php echo webnews_entry_meta(); ?>
+	   								</div>	
+   							</div>
 							</div>
 
 						</div>
@@ -169,24 +171,24 @@
                                 }
                        	?>
 						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+							<div class="img-center img-col-3-12">
+								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
-							<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
+								<div class="carousel-caption d-md-block text-left">
+									
+									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+									<h5>
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
+						            	 <?php the_title(); ?>
+						             	</a>
+					          		</h5>
+					          		
+					          		<div class="entry-meta frontpage">
+	       								<?php echo webnews_entry_meta(); ?>
+	   								</div>	
 
-							<div class="carousel-caption d-md-block text-left">
-								
-								<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-								<h5>
-	                                <a href="<?php the_permalink(); ?>" class="text-white">
-					            	 <?php the_title(); ?>
-					             	</a>
-				          		</h5>
-				          		
-				          		<div class="entry-meta frontpage">
-       								<?php echo webnews_entry_meta(); ?>
-   								</div>	
-
+								</div>
 							</div>
-
 						</div>
 					 <?php
 			    	 	$i++;
@@ -201,52 +203,54 @@
 				<!-- slider -->
 				 <?php if ($posts_slider->have_posts()) : ?>
 				  <div id="carouselCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+				  	<div class="img-center img-col-6">
 				    	<div class="carousel-inner">
-				    	<?php
-				    		$i = 0;
-                            while ($posts_slider->have_posts()) : 
-                            	$posts_slider->the_post();
-                                if (has_post_thumbnail()) {
-                                    $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-                                    $active = $i == 0 ? 'active' : '';
-                                } else {
-                                    $url = '';
-                                }
-                        ?>
-				      	<div class="carousel-item <?php echo $active; ?>">
+					    	<?php
+					    		$i = 0;
+	                            while ($posts_slider->have_posts()) : 
+	                            	$posts_slider->the_post();
+	                                if (has_post_thumbnail()) {
+	                                    $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+	                                    $active = $i == 0 ? 'active' : '';
+	                                } else {
+	                                    $url = '';
+	                                }
+	                        ?>
+					      	<div class="carousel-item <?php echo $active; ?>">
 
-				        <?php
-                            if ($url) { ?>
-                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-                        <?php } ?>
-                                 
-				        <div class="carousel-caption text-left">
-				          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-                          <h5>
-                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-				          </h5>
-						  <div class="entry-meta frontpage">
-           					<?php echo webnews_entry_meta(); ?>
-       					  </div>	
-				        </div>
+						        <?php
+		                            if ($url) { ?>
+		                            <img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+		                        <?php } ?>
+		                                 
+						        <div class="carousel-caption text-left">
+						          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+		                          <h5>
+		                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+						          </h5>
+								  <div class="entry-meta frontpage">
+		           					<?php echo webnews_entry_meta(); ?>
+		       					  </div>	
+						        </div>
 
-				        </div>
-				    	
-				    	 <?php
-				    	 	$i++;
-                            endwhile;
-                            endif;
-                            wp_reset_postdata();
-                         ?>
+						        </div>
+						    	
+						    	 <?php
+						    	 	$i++;
+		                            endwhile;
+		                            endif;
+		                            wp_reset_postdata();
+		                         ?>
 				  		</div>
-				    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
-				      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				      <span class="sr-only">Previous</span>
-				    </a>
-				    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
-				      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				      <span class="sr-only">Next</span>
-				    </a>
+					    <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+					      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					      <span class="sr-only">Previous</span>
+					    </a>
+					    <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+					      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					      <span class="sr-only">Next</span>
+					    </a>
+					</div>
 				  </div>
 
 				<!-- end of slider -->
@@ -266,24 +270,24 @@
                                 }
                        	?>
 						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+							<div class="img-center img-col-3-12">
+								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
-							<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
+								<div class="carousel-caption d-md-block text-left">
+									
+									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+									<h5>
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
+						            	 <?php the_title(); ?>
+						             	</a>
+					          		</h5>
+					          		
+					          		<div class="entry-meta frontpage">
+	       								<?php echo webnews_entry_meta(); ?>
+	   								</div>	
 
-							<div class="carousel-caption d-md-block text-left">
-								
-								<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-								<h5>
-	                                <a href="<?php the_permalink(); ?>" class="text-white">
-					            	 <?php the_title(); ?>
-					             	</a>
-				          		</h5>
-				          		
-				          		<div class="entry-meta frontpage">
-       								<?php echo webnews_entry_meta(); ?>
-   								</div>	
-
+								</div>
 							</div>
-
 						</div>
 					 <?php
 			    	 	$i++;
@@ -331,6 +335,7 @@
 				<!-- slider -->
 				 <?php if ($posts_slider->have_posts()) : ?>
 				  <div id="carouselCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+				  	<div class="img-center img-col-6">
 				    	<div class="carousel-inner">
 				    	<?php
 				    		$i = 0;
@@ -378,7 +383,7 @@
 				      <span class="sr-only">Next</span>
 				    </a>
 				  </div>
-
+				</div>
 				<!-- end of slider -->
 			</div>
 			<div class="col-xl-12 col-md-12 col-sm-12 bar-treding-two">
@@ -406,24 +411,24 @@
                                 }
                        	?>
 						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+							<div class="img-center img-col-3-12">
+								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
-							<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
+								<div class="carousel-caption d-md-block text-left">
+									
+									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+									<h5>
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
+						            	 <?php the_title(); ?>
+						             	</a>
+					          		</h5>
+					          		
+					          		<div class="entry-meta frontpage">
+	       								<?php echo webnews_entry_meta(); ?>
+	   								</div>	
 
-							<div class="carousel-caption d-md-block text-left">
-								
-								<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-								<h5>
-	                                <a href="<?php the_permalink(); ?>" class="text-white">
-					            	 <?php the_title(); ?>
-					             	</a>
-				          		</h5>
-				          		
-				          		<div class="entry-meta frontpage">
-       								<?php echo webnews_entry_meta(); ?>
-   								</div>	
-
+								</div>
 							</div>
-
 						</div>
 					 <?php
 			    	 	$i++;
@@ -449,24 +454,24 @@
                                 }
                        	?>
 						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+							<div class="img-center img-col-3-12">
+								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
-							<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
+								<div class="carousel-caption d-md-block text-left">
+									
+									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
+									<h5>
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
+						            	 <?php the_title(); ?>
+						             	</a>
+					          		</h5>
+					          		
+					          		<div class="entry-meta frontpage">
+	       								<?php echo webnews_entry_meta(); ?>
+	   								</div>	
 
-							<div class="carousel-caption d-md-block text-left">
-								
-								<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-								<h5>
-	                                <a href="<?php the_permalink(); ?>" class="text-white">
-					            	 <?php the_title(); ?>
-					             	</a>
-				          		</h5>
-				          		
-				          		<div class="entry-meta frontpage">
-       								<?php echo webnews_entry_meta(); ?>
-   								</div>	
-
+								</div>
 							</div>
-
 						</div>
 					 <?php
 			    	 	$i++;

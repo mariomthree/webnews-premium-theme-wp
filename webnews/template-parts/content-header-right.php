@@ -3,7 +3,7 @@
  * Widget Totbar
  *
  *
- * @package WebNews
+ * @package webnews
  */
 
 ?>

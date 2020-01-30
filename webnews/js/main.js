@@ -1,6 +1,4 @@
-$(document).ready(function() {
-
-  //*header customizer
+( function( $ ) {
   
   if($('.social_links').parent().hasClass('topbarRight')){
     $('.topbarRight').css({'margin-left': '-2.5rem'});
@@ -40,6 +38,16 @@ $(document).ready(function() {
     });
   }
 
+  //social links & image_published
+  if($('.social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
+    $('.topbarRight').css({'margin-left': '-14.4rem'});
+
+    $('.headerRight').css({
+      'margin-left': '-10rem',
+      'margin-top': '1rem'});
+  }
+
+
   //end of header customizer
   
   $('div.slim h5').addClass('meta');
@@ -56,4 +64,4 @@ $(document).ready(function() {
     $('.content-search').addClass('justify-content-end');
   }
 
-});
+})(jQuery);

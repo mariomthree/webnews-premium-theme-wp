@@ -1,6 +1,6 @@
 <?php
 /**
- * @package    WebNews
+ * @package webnews
  *
  */
 

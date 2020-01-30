@@ -1,8 +1,8 @@
 <?php  
 /**
- * WebNews Theme Support
+ * webnews Theme Support
  *
- * @package WebNews
+ * @package webnews
  */
 
 function get_headerLayout()

@@ -84,6 +84,59 @@ $wp_customize->add_control(
 );
 //End of Blog Sidebar
 
+# Archive Settings 
+
+$wp_customize->add_section('archive_settings',
+    array(
+        'title'      => esc_html__('Archive Settings', 'webnews'),
+        'priority'   => 2,
+        'capability' => 'edit_theme_options',
+        'panel'      => 'theme_option_panel',
+    )
+);
+$wp_customize->add_setting('archive_style',
+    array(
+        'default'           => 'archive-02',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'webnews_sanitize_select',
+    )
+);
+
+$wp_customize->add_control( 'archive_style',
+    array(
+        'label'       => esc_html__('Archive Style', 'webnews'),
+        'section'     => 'archive_settings',
+        'type'        => 'select',
+        'choices'               => array(
+            'archive-01' => esc_html__('Archive 01', 'webnews' ),
+            'archive-02' => esc_html__('Archive 02', 'webnews' ),
+        ),
+        'priority'    => 1,
+    )
+);
+
+$wp_customize->add_setting('archive_content',
+    array(
+        'default'           => 'archive-02',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'webnews_sanitize_select',
+    )
+);
+
+$wp_customize->add_control( 'archive_content',
+    array(
+        'label'       => esc_html__('Archive Style', 'webnews'),
+        'section'     => 'archive_settings',
+        'type'        => 'select',
+        'choices'               => array(
+            'archive-01' => esc_html__('Archive 01', 'webnews' ),
+            'archive-02' => esc_html__('Archive 02', 'webnews' ),
+        ),
+        'priority'    => 1,
+    )
+);
+
+//End of Archive Settings
 //Post Meta #2
    
    $wp_customize->add_section('post_meta',

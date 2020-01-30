@@ -36,20 +36,22 @@
 			                    } 
 	            		?>
                 		<div class="col-sm-12 col-md-3 col-lg-3 mb-4">
-           	                <?php
-	                    	if ($url) { ?>
-	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
-			                <?php } ?>
-			                         
-			                <div class="carousel-caption d-md-block text-left">
-                                <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-			                      <h5>
-			                        <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
-			                      </h5>
-			                      <div class="entry-meta frontpage">
-			                        <?php echo webnews_entry_meta(); ?>
-			                      </div>    
-			                </div>
+                            <div class="img-center img-col-3-12">
+               	                <?php
+    	                    	if ($url) { ?>
+    	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
+    			                <?php } ?>
+    			                         
+    			                <div class="carousel-caption d-md-block text-left">
+                                    <div class="categorys py-3"><?php webnews_get_category(); ?></div>
+    			                      <h5>
+    			                        <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+    			                      </h5>
+    			                      <div class="entry-meta frontpage">
+    			                        <?php echo webnews_entry_meta(); ?>
+    			                      </div>    
+    			                </div>
+                            </div>
                 		</div>
                 		<?php 
                 			$i++;

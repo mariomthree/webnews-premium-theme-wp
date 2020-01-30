@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WebNews
+ * @package webnews
  */
 if(is_singular()){
 	get_template_part('template-parts/content-single');
@@ -12,33 +12,47 @@ if(is_singular()){
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="row">
 
-	<header class="entry-header pb-3">
-		<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-		<?php
-			the_title( '<h2 class="entry-title pb-1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		<div class="webnews-col-40">
+			<div class="img-center col-40">
+				<?php webnews_post_thumbnail(); ?>	
+			</div>
+			
+		</div>
+		
+		<div class="webnews-col-60 col-md">
+			
+			<header class="entry-header">
+				<div class="categorys"><?php webnews_get_category(); ?></div>
+				<?php
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php webnews_entry_meta(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+				if ( 'post' === get_post_type() ) :
+					?>
+					<div class="entry-meta">
+						<?php webnews_entry_meta(); ?>
+					</div><!-- .entry-meta -->
+				<?php endif; ?>
 
-	</header><!-- .entry-header -->
+			</header><!-- .entry-header -->
+			
+			<div class="entry-content">
+				<a href="<?php the_permalink() ?>" rel="bookmark" class="text-dark">
+					<?php echo substr(strip_tags(get_the_content()),0,233).' [...]'; ?>
+				</a>
+			</div><!-- .entry-content -->
 
-	<?php webnews_post_thumbnail(); ?>
-	
+			<footer class="entry-footer">
+				<?php webnews_edit_post_link(); ?>
+			</footer><!-- .entry-footer -->
+		
+		</div>
 
-	<div class="entry-content">
-		<a href="<?php the_permalink() ?>" rel="bookmark" class="text-dark">
-			<?php echo substr(strip_tags(get_the_content()),0,250).' [...]'; ?>
-		</a>
-	</div><!-- .entry-content -->
+</div>
+		<div class="container border-bottom py-3"></div>
 
-	<footer class="entry-footer">
-		<?php webnews_edit_post_link(); ?>
-	</footer><!-- .entry-footer -->
+
 
 </article>
 <?php } ?>

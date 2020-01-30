@@ -2,7 +2,7 @@
 /**
  * Sanitization functions.
  *
- * @package WebNews
+ * @package webnews
  */
 
     function webnews_sanitize_checkbox( $checked ) {

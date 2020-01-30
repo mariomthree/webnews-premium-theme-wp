@@ -2,13 +2,13 @@
 Theme Name: WebNews
 Theme URI: http://underscores.me/
 Author: Mario Manuel Mabande
-Author URI: https://github.com/mariomtree/
-Description: WebNews é um template limpo, compatível em diversas dimensões (responsivo), fácil de organizar, contem vários widgets, o template pode ser usado para noticias, desporto, blog, negócios, saúde, tecnologia.
+Author URI: https://github.com/mariomthree/
+Description: WebNews is a clean template, compatible in several dimensions (responsive), easy to organize, contains several widgets, the template can be used for news, sports, blog, business, health, technology.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: webnews
-Tags: news, business, blog, sport, one-column, two-columns, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, left-sidebar, right-sidebar, none-sidebar, editor-style, post-formats,theme-options, frontend-options, responsive, clean, minimal.
+Tags: news, blog, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, right-sidebar, left-sidebar, theme-options, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -744,6 +744,9 @@ a:hover, a:active {
 	content: '>>';
 	padding-left: 10px;
 }
+.comment-author-link{
+	font-weight: bold;
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1130,4 +1133,11 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+.wp-block-image figcaption{
+	background-color: #e7e7e7;
+	padding: 5px;
+	margin-top: 0px;
+	font-size: 15px;
 }

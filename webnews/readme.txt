@@ -13,7 +13,7 @@ A starter theme called WebNews.
 
 == Description ==
 
-Theme for news
+WebNews is a clean template, compatible in several dimensions (responsive), easy to organize, contains several widgets, the template can be used for news, sports, blog, business, health, technology.
 
 == Installation ==
 

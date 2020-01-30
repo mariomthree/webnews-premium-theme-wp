@@ -1,8 +1,8 @@
 <?php
 /**
- * WebNews Theme Customizer
+ * webnews Theme Customizer
  *
- * @package WebNews
+ * @package webnews
  */
 
 /**
