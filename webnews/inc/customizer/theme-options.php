@@ -117,7 +117,7 @@ $wp_customize->add_control( 'archive_style',
 
 $wp_customize->add_setting('archive_content',
     array(
-        'default'           => 'archive-02',
+        'default'           => 'summary',
         'capability'        => 'edit_theme_options',
         'sanitize_callback' => 'webnews_sanitize_select',
     )
@@ -125,18 +125,19 @@ $wp_customize->add_setting('archive_content',
 
 $wp_customize->add_control( 'archive_content',
     array(
-        'label'       => esc_html__('Archive Style', 'webnews'),
+        'label'       => esc_html__('Content view', 'webnews'),
         'section'     => 'archive_settings',
         'type'        => 'select',
         'choices'               => array(
-            'archive-01' => esc_html__('Archive 01', 'webnews' ),
-            'archive-02' => esc_html__('Archive 02', 'webnews' ),
+            'full' => esc_html__('Full', 'webnews' ),
+            'summary' => esc_html__('Summary', 'webnews' ),
         ),
-        'priority'    => 1,
+        'priority'    => 2,
     )
 );
 
 //End of Archive Settings
+
 //Post Meta #2
    
    $wp_customize->add_section('post_meta',

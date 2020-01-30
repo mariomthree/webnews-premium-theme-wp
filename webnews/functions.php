@@ -285,3 +285,4 @@ require get_template_directory() . '/inc/widgets/facebook.php';
 require get_template_directory() . '/inc/widgets/twitter.php';
 require get_template_directory() . '/template-parts/frontpage-parts/featured-functions.php';
 require get_template_directory() . '/template-parts/frontpage-parts/banner-functions.php';
+require get_template_directory() . '/template-parts/archive/archive-functions.php';

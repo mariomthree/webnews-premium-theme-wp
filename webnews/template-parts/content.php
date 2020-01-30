@@ -12,47 +12,21 @@ if(is_singular()){
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="row">
 
-		<div class="webnews-col-40">
-			<div class="img-center col-40">
-				<?php webnews_post_thumbnail(); ?>	
-			</div>
+		<?php 
+			$archive_style = get_theme_mod('archive_style','archive-02');
+			$content_view = get_theme_mod('archive_content','summary');
 			
-		</div>
-		
-		<div class="webnews-col-60 col-md">
-			
-			<header class="entry-header">
-				<div class="categorys"><?php webnews_get_category(); ?></div>
-				<?php
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			if ($archive_style == 'archive-01') {	
+				archive_01($content_view);
+			}
 
-				if ( 'post' === get_post_type() ) :
-					?>
-					<div class="entry-meta">
-						<?php webnews_entry_meta(); ?>
-					</div><!-- .entry-meta -->
-				<?php endif; ?>
+			if ($archive_style == 'archive-02') {
+				archive_02($content_view);
+			}
 
-			</header><!-- .entry-header -->
-			
-			<div class="entry-content">
-				<a href="<?php the_permalink() ?>" rel="bookmark" class="text-dark">
-					<?php echo substr(strip_tags(get_the_content()),0,233).' [...]'; ?>
-				</a>
-			</div><!-- .entry-content -->
-
-			<footer class="entry-footer">
-				<?php webnews_edit_post_link(); ?>
-			</footer><!-- .entry-footer -->
-		
-		</div>
-
-</div>
+		 ?>
 		<div class="container border-bottom py-3"></div>
-
-
 
 </article>
 <?php } ?>
