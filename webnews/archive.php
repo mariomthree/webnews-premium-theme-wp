@@ -8,7 +8,8 @@
  */
 $header_img = has_header_image() ? get_header_image() : get_template_directory_uri().'/assets/img/bg-header.jpg';
 get_header();
-$page_title = str_replace('Category:', '', get_the_archive_title());
+
+$page_title = explode(':', get_the_archive_title())[1];
 
 ?>
 	<div id="primary" class="content-area">
