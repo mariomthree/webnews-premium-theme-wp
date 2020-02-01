@@ -157,6 +157,10 @@ p,a{
 .social-links-top{
    position: relative;
 }
+.social-links-top i{
+	font-size: 25px;
+	padding-top:  8px;
+}
 .social-links-top li{
 	display: inline-block;
 	font-size: 1.5rem;

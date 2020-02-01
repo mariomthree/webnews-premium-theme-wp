@@ -18,7 +18,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div style="background-image: url(<?php echo $header_img;?>);">
+			<div style="background-image: url(<?php echo esc_attr($header_img);?>);">
 				<header class="entry-header p-5">
 					<?php echo '<h1 class="entry-title">'.$page_title.'</h1>' ?>
 				</header><!-- .entry-header -->

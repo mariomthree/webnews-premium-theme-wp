@@ -11,7 +11,7 @@ $header_img = has_header_image() ? get_header_image() : get_template_directory_u
 
 <section class="no-results not-found">
 
-	<div style="background-image: url(<?php echo $header_img;?>);">
+	<div style="background-image: url(<?php echo esc_attr($header_img);?>);">
 		<header class="page-header p-5">
 			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'webnews' ); ?></h1>
 		</header><!-- .page-header -->

@@ -63,7 +63,7 @@ function color_field_edit_category( $term ) {
     <tr class="form-field">
         <th scope="row"><label for="category-color">Category Color</label></th>
         <td>
-            <input name="category_color" value="<?php echo $color; ?>" class="category-colorpicker" id="category-color" />
+            <input name="category_color" value="<?php echo esc_attr($color); ?>" class="category-colorpicker" id="category-color" />
             <p class="description">Select a category color for help users differentiate the category.</p>
         </td>
     </tr>

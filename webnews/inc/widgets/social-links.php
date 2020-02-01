@@ -88,9 +88,9 @@
         {
             extract($args);
             $title = apply_filters('widget_title', $instance['title']);
-            echo wp_specialchars_decode(esc_html($before_widget));
+            echo htmlspecialchars_decode(esc_html($before_widget));
             if ($title) {
-                echo wp_specialchars_decode(esc_html($before_title . $title . $after_title));
+                echo htmlspecialchars_decode(esc_html($before_title . $title . $after_title));
             }
             echo '<nav class="social-links-top">';
             echo '<ul>';
@@ -106,7 +106,7 @@
             }
             echo '</ul>';
             echo '</nav>';
-            echo wp_specialchars_decode(esc_html($after_widget));
+            echo htmlspecialchars_decode(esc_html($after_widget));
         }
 
         function update($new_instance, $old_instance)

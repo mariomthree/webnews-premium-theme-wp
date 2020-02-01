@@ -19,7 +19,7 @@
 						$logo = get_custom_logo();
 						if ( $logo ) {
 							
-							echo $logo;
+							echo sprintf($logo);
 						
 						}else{
 						
@@ -31,7 +31,7 @@
 				 			
 				 			if ( $web_news_description || is_customize_preview() ) :
 								?>
-								<p class="site-description"><?php echo $web_news_description; /* WPCS: xss ok. */ ?></p>
+								<p class="site-description text-white"><?php echo sprintf($web_news_description); /* WPCS: xss ok. */ ?></p>
 
 						<?php 
 							endif; 

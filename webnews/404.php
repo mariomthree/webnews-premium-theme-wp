@@ -14,7 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-				<div style="background-image: url(<?php echo $header_img;?>);">
+				<div style="background-image: url(<?php echo sprintf($header_img); ?>);">
 					<header class="page-header p-5">
 						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'webnews' ); ?></h1>
 					</header><!-- .page-header -->
@@ -59,9 +59,11 @@ get_header();
 							?>
 							
 						</li>
-						<li>		<?php 
-						the_widget( 'WP_Widget_Tag_Cloud' );
-						?></li>
+						<li>		
+						<?php 
+							the_widget( 'WP_Widget_Tag_Cloud' );
+						?>
+						</li>
 					</ul>
 				</div>
 

@@ -111,7 +111,7 @@ endif;
         }
         $output.='</h5>';
 
-        echo $output;
+        echo sprintf($output);
 
     }
 
@@ -121,6 +121,7 @@ endif;
         $views = get_post_meta( $postID, $metaKey, true );
         $views = $views == '' ? '0' : $views;
         return $views;
+
     }
 
     function webnews_update_number_views($postID)

@@ -10,7 +10,7 @@
                     <div class="container-fluid pb-4">
                         <div class="row">
                             <div class="col-md-2 bg-danger text-white text-uppercase p-2">
-                                <?php echo $featured_title; ?>
+                                <?php echo esc_attr($featured_title); ?>
                             </div>
                             <div class="col-md-10 bg-collgray">
                             </div>

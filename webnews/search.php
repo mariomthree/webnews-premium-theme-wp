@@ -16,7 +16,7 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 			
-			<div style="background-image: url(<?php echo $header_img;?>);">
+			<div style="background-image: url(<?php echo esc_attr($header_img); ?>);">
 				<header class="page-header p-5">
 					<h1 class="page-title">
 						<?php

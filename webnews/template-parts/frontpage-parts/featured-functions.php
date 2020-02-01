@@ -34,7 +34,7 @@
 	            </div>
 	            <div class="col-xl-7 col-md-7 col-sm-12 mb-5">
                       <h5>
-                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
                       </h5>
                         <div class="categorys py-3"><?php webnews_get_category(); ?></div>
                         <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,600).' [...]'; ?></p>
@@ -77,7 +77,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -123,7 +123,7 @@
 		                <div class="carousel-caption d-md-block text-left">
 		                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		                	<h5>
-	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
 	                      	</h5>
 		                    <div class="entry-meta frontpage">
 		                      <?php webnews_entry_meta(); ?>
@@ -169,7 +169,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -215,7 +215,7 @@
 		                <div class="carousel-caption d-md-block text-left"> 
 	                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		                      <h5>
-	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
 	                      	  </h5>
 	                      	  <div class="entry-meta frontpage">
 		                        <?php webnews_entry_meta(); ?>
@@ -257,7 +257,7 @@
              				</div>
              			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
              				   <h5>
-		                        	<a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+		                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
 		                      	  </h5>
 		                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
              				 <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,130).' [...]'; ?></p>
@@ -302,7 +302,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -362,7 +362,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,140).' [...]'; ?></p>
 			                </div>

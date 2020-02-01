@@ -38,7 +38,7 @@
     });
   }
 
-  //social links & image_published
+    //social links & image_published
   if($('.social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
     $('.topbarRight').css({'margin-left': '-14.4rem'});
 
@@ -46,7 +46,6 @@
       'margin-left': '-10rem',
       'margin-top': '1rem'});
   }
-
 
   //end of header customizer
   

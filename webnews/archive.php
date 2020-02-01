@@ -14,7 +14,7 @@ $page_title = explode(':', get_the_archive_title())[1];
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-		<div style="background-image: url(<?php echo $header_img;?>);">
+		<div style="background-image: url(<?php echo sprintf($header_img); ?>);">
 			<header class="page-header p-5">
 				<?php
 					echo '<h1 class="page-title">'.$page_title.'</h1>';
