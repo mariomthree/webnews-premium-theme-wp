@@ -169,7 +169,7 @@ endif;
 
 	function webnews_entry_share(){
 
-        $content .= '<div class="share">';
+        $content = '<div class="share pt-3">';
 
         $title = get_the_title();
         $permalink = get_permalink();
@@ -181,7 +181,7 @@ endif;
         $linkedin = 'https://www.linkedin.com/shareArticle?mini=true&url='.$permalink.'&title=pinterest&summary='.$title.'&source='.$title;
         $pinterest = 'https://pinterest.com/pin/create/button/?url='.$permalink.'&media='.$img.'&description='.$title;
 
-        $content .= '<ul class="list-unstyled list-inline">';
+        $content .= '<ul class="list-unstyled list-inline" style="margin-left: 0;">';
         if (get_theme_mod('share_twitter',true)) 
         $content .= '<li class="list-inline-item"><a class="btn btn-sm bg-twitter text-white" href="'.$twitter.'" target="_blank" rel="nofollow" title="twitter"><i class="fa fa-twitter"></i></a></li>';
         if (get_theme_mod('share_facebook',true)) 

@@ -49,14 +49,10 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xl-4 col-md-4 col-sm-12">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 					<div class="tags-list">
 						<?php webnews_entry_tags(); ?>
-					</div>
-				</div>
-				<div class="col-xl-8 col-md-8 col-sm-12">
 						<?php echo webnews_entry_share(); ?>
 				</div>
 			</div>
