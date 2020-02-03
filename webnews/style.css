@@ -900,7 +900,11 @@ a:hover, a:active {
 .widget-footer .description{
 	color: white;
 }
-
+.tagcloud .tag-cloud-link{
+	margin: 8px;
+	font-size: 16px !important;
+	text-decoration: underline;
+}
 
 /*--------------------------------------------------------------
 # Content
