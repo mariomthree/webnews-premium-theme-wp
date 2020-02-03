@@ -84,7 +84,11 @@ p,a{
 .rss i:hover {
  color:#FF9900;
 }
-
+@media screen and (min-width:1200px){
+.webnews-container{
+	 max-width: 1300px;
+ }
+}
 /*
 	Header
 	--------------------------------------------
@@ -321,7 +325,7 @@ div.fita span{
 .img-center{
 	display: grid;
 	align-content: center;
-	background-color: #5e656d;
+	background-color: #89898c;
 }
 .img-center img{
 	width: 100%;
@@ -363,7 +367,7 @@ div.fita span{
 	max-height: 634.2px;
 }
 .col-40{
-	height: 247px;
+	height: 237px;
 }
 .col-40 img{
 	max-height: 247px;
