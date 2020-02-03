@@ -13,7 +13,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<div class="container-fluid py-5">
+			<div class="container-fluid webnews-container py-5">
 				<div class="row">
 					<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
 						<div class="col-xl-4 col-md-4 col-sm-12">

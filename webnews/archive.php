@@ -23,7 +23,7 @@ $page_title = explode(':', get_the_archive_title())[1];
 			</header><!-- .page-header -->
 		</div>
 
-		<div class="container-fluid py-5 px-3">
+		<div class="container-fluid webnews-container py-5 px-3">
 			<div class="row">
 				<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
 				<div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
