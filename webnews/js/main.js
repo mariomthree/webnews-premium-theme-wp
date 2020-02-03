@@ -1,10 +1,10 @@
-( function( $ ) {
+( function( $ ) { 
   
-  if($('.social_links').parent().hasClass('topbarRight')){
+  if($('.widget_social_links').parent().hasClass('topbarRight')){
     $('.topbarRight').css({'margin-left': '-2.5rem'});
   }
 
-  if($('.social_links').parent().hasClass('topbarLeft')){
+  if($('.widget_social_links').parent().hasClass('topbarLeft')){
     $('.topbarLeft').css({ 'margin-left': '-2rem'});
   }
 
@@ -16,7 +16,7 @@
     });
   }
 
-  if ($('.social_links').parent().hasClass('headerRight')) {
+  if ($('.widget_social_links').parent().hasClass('headerRight')) {
     $('.headerRight').css({'padding-top': '2.5rem'})
   } 
 
@@ -39,7 +39,7 @@
   }
 
     //social links & image_published
-  if($('.social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
+  if($('.widget_social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
     $('.topbarRight').css({'margin-left': '-14.4rem'});
 
     $('.headerRight').css({

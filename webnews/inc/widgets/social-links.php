@@ -7,15 +7,8 @@
  */
 
     class social_links extends WP_Widget {
-        
-        public function __construct() {
 
-            $widget_ops = array('classname' => 'social_links', 'description' => esc_html__('Displays your social profile.', 'webnews'));
-            parent::__construct(false, esc_html__('M3: Social Links', 'webnews'), $widget_ops);
-
-        }
-
-        public $socials = array(
+        private $socials = array(
                 'facebook'  => array(
                     'title' => 'facebook',
                     'name'  => 'facebook_username',
@@ -84,13 +77,23 @@
                 )
             );
 
+        public function __construct() {
+            parent::__construct(
+                'social_links',esc_html__('M3: Social Links','webnews'), 
+                array('description'=>esc_html__('Displays your social profile', 'webnews'))
+            );
+
+        }
+
+
+
         function widget($args, $instance)
         {
             extract($args);
             $title = apply_filters('widget_title', $instance['title']);
-            echo htmlspecialchars_decode(esc_html($before_widget));
+            echo wp_specialchars_decode($before_widget);
             if ($title) {
-                echo htmlspecialchars_decode(esc_html($before_title . $title . $after_title));
+                echo wp_specialchars_decode($before_title . $title . $after_title);
             }
             echo '<nav class="social-links-top">';
             echo '<ul>';
@@ -106,7 +109,7 @@
             }
             echo '</ul>';
             echo '</nav>';
-            echo htmlspecialchars_decode(esc_html($after_widget));
+            echo wp_specialchars_decode($after_widget);
         }
 
         function update($new_instance, $old_instance)
