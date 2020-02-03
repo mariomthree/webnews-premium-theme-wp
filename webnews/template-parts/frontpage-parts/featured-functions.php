@@ -32,9 +32,9 @@
 		                </div>
 		            </div>
 	            </div>
-	            <div class="col-xl-7 col-md-7 col-sm-12 mb-5">
+	            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 mb-5">
                       <h5>
-                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
                       </h5>
                         <div class="categorys py-3"><?php webnews_get_category(); ?></div>
                         <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,600).' [...]'; ?></p>
@@ -77,7 +77,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -113,7 +113,7 @@
 	                        $url = '';
 	                    } 
 	            ?>
-	            <div class="col-xl-4 col-md-4 col-sm-12 mb-5">
+	            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-5">
 	            	<div class="img-center img-col-4-12">
 		                <?php
 		                    if ($url) { ?>
@@ -123,7 +123,7 @@
 		                <div class="carousel-caption d-md-block text-left">
 		                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		                	<h5>
-	                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 	                      	</h5>
 		                    <div class="entry-meta frontpage">
 		                      <?php webnews_entry_meta(); ?>
@@ -139,7 +139,7 @@
 		    </div>
 
 		    <div class="row">
-		        <div class="col-sm-12 col-md-12 col-xl-12">
+		        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
 		            <div class="row">
 		                <?php
 		                    $i = 0;
@@ -151,7 +151,7 @@
 		                            $url = '';
 		                        }
 		                ?>
-		                <div class="col-xl-3 col-md-3 col-sm-12 mb-4">
+		                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-4">
 		                	<div class="img-center img-col-3-12">
 			                	<?php
 		                    	if ($url) { ?>
@@ -165,11 +165,11 @@
 				                </div>
 			            	</div>
 		                </div>
-		                <div class="col-xl-3 col-md-3 col-sm-12">
+		                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -205,7 +205,7 @@
 	                        $url = '';
 	                    } 
 	            ?>
-	            <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
+	            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
 	            	<div class="img-center img-col-6">
 		                <?php
 		                    if ($url) { ?>
@@ -215,7 +215,7 @@
 		                <div class="carousel-caption d-md-block text-left"> 
 	                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		                      <h5>
-	                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
+	                        	<a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 	                      	  </h5>
 	                      	  <div class="entry-meta frontpage">
 		                        <?php webnews_entry_meta(); ?>
@@ -228,7 +228,7 @@
 	                    wp_reset_postdata();
 	                    endwhile;
 	            ?> 
-	            <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
+	            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
              		<div class="row">
              			<?php  
 			                $i = 0;
@@ -241,7 +241,7 @@
 			                    } 
 			            ?>
 
-             			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
+             			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 featured_03">
              				<div class="img-center img-col-6-6">
 			             		<?php
 				                    if ($url) { ?>
@@ -255,9 +255,9 @@
 				                </div>
 	             				</div>
              				</div>
-             			<div class="col-xl-6 col-md-6 col-sm-12 featured_03">
+             			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 featured_03">
              				   <h5>
-		                        	<a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+		                        	<a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
 		                      	  </h5>
 		                          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
              				 <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,130).' [...]'; ?></p>
@@ -272,7 +272,7 @@
 		   		</div>
 		   	</div>
 		    <div class="row">
-		        <div class="col-xl-12 col-md-12 col-sm-12">
+		        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 		            <div class="row">
 		                <?php
 		                    $i = 0;
@@ -284,7 +284,7 @@
 		                            $url = '';
 		                        }
 		                ?>
-		                <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+		                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-4">
 		                	<div class="img-center img-col-3-12">
 		                	<?php
 	                    	if ($url) { ?>
@@ -302,7 +302,7 @@
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,115).' [...]'; ?></p>
 			                </div>
@@ -329,12 +329,12 @@
 		?>
 			<div class="row">
                	<?php if($sidebar == 'sidebar-left'): ?>
-               	<div class="col-xl-4 col-md-4 col-sm-12">
+               	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 		    		<?php dynamic_sidebar('sidebar-1'); ?>
 		    	</div>
 		    	<?php endif ?>
 		
-		        <div class="col-xl-8 col-md-8 col-sm-12">
+		        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
 		            <div class="row">
 		                <?php
 		                    $i = 0;
@@ -346,7 +346,7 @@
 		                            $url = '';
 		                        }
 		                ?>
-		                <div class="col-xl-4 col-md-4 col-sm-12 mb-4">
+		                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-4">
 		                	<?php
 	                    	if ($url) { ?>
 	                    	<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?> ">
@@ -358,11 +358,11 @@
 			                      </div>    
 			                </div>
 		                </div>
-		                <div class="col-xl-8 col-md-8 col-sm-12">
+		                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
 		                	<div class="d-block">
 			                	<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 			                      <h5>
-			                        <a href="<?php esc_attr(the_permalink()); ?>" class="text-dark"> <?php the_title(); ?> </a>
+			                        <a href="<?php the_permalink(); ?>" class="text-dark"> <?php the_title(); ?> </a>
 			                      </h5>
 			                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,140).' [...]'; ?></p>
 			                </div>
@@ -376,7 +376,7 @@
 		        </div>
 		    
 				<?php if($sidebar == 'sidebar-right'): ?>				
-		    	<div class="col-xl-4 col-md-4 col-sm-12">
+		    	<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 		    		<?php dynamic_sidebar('sidebar-1'); ?>
 		    	</div>
 		    	<?php endif ?>

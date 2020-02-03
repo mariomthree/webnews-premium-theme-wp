@@ -35,6 +35,7 @@
 			                            	$posts_slider->the_post();
 			                                if (has_post_thumbnail()) {
 			                                    $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+
 			                                    $active = $i == 0 ? 'active' : '';
 			                                } else {
 			                                    $url = '';
@@ -50,7 +51,7 @@
 								        <div class="carousel-caption text-left">
 								          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
 				                          <h5>
-				                            <a href="<?php esc_attr(get_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
+				                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 								          </h5>
 										  <div class="entry-meta frontpage">
 				           					<?php echo webnews_entry_meta(); ?>
@@ -105,7 +106,7 @@
                                     $url = '';
                                 }
                        	?>
-						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+						<div class="col-sm-12 col-md-12 col-xl-12 col-lg-12 mb-4">
 							<div class="img-center img-col-4-12">
 								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
@@ -113,7 +114,7 @@
 									
 									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 									<h5>
-		                                <a href="<?php esc_attr(the_permalink()); ?>" class="text-white">
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
@@ -146,7 +147,7 @@
     	$title_slider 		= get_theme_mod('main_news_slider_title','Main Story');
     	//$title_trending 	= get_theme_mod('trending_title','Trending Story');
 		?>
-			<div class="col-xl-12 col-md-12 col-sm-12">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
@@ -170,7 +171,7 @@
                                     $url = '';
                                 }
                        	?>
-						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-4">
 							<div class="img-center img-col-3-12">
 								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
@@ -178,7 +179,7 @@
 									
 									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 									<h5>
-		                                <a href="<?php esc_attr(the_permalink()); ?>" class="text-white">
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
@@ -226,7 +227,7 @@
 						        <div class="carousel-caption text-left">
 						          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
 		                          <h5>
-		                            <a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
+		                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 						          </h5>
 								  <div class="entry-meta frontpage">
 		           					<?php echo webnews_entry_meta(); ?>
@@ -269,7 +270,7 @@
                                     $url = '';
                                 }
                        	?>
-						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
 							<div class="img-center img-col-3-12">
 								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
@@ -277,7 +278,7 @@
 									
 									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 									<h5>
-		                                <a href="<?php esc_attr(the_permalink()); ?>" class="text-white">
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
@@ -311,7 +312,7 @@
     	$title_slider 		= get_theme_mod('main_news_slider_title','Main Story');
     	$title_trending 	= get_theme_mod('trending_title','Trending Story');
 		?>
-			<div class="col-xl-6 col-md-6 col-sm-12">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
@@ -321,7 +322,7 @@
 				</div>
 				<!-- end of bar-notification -->
 			</div>
-			<div class="col-xl-6 col-md-6 col-sm-12 bar-treding-one">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 bar-treding-one">
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
@@ -358,7 +359,7 @@
 				        <div class="carousel-caption text-left">
 				          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
                           <h5>
-                            <a href="<?php esc_attr(the_permalink()); ?>" class="text-white"> <?php the_title(); ?> </a>
+                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 				          </h5>
 						  <div class="entry-meta frontpage">
            					<?php echo webnews_entry_meta(); ?>
@@ -386,7 +387,7 @@
 				</div>
 				<!-- end of slider -->
 			</div>
-			<div class="col-xl-12 col-md-12 col-sm-12 bar-treding-two">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 bar-treding-two">
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
@@ -410,7 +411,7 @@
                                     $url = '';
                                 }
                        	?>
-						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
 							<div class="img-center img-col-3-12">
 								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
@@ -418,7 +419,7 @@
 									
 									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
 									<h5>
-		                                <a href="<?php esc_attr(the_permalink()); ?>" class="text-white">
+		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
@@ -453,7 +454,7 @@
                                     $url = '';
                                 }
                        	?>
-						<div class="col-sm-12 col-md-12 col-xl-12 mb-4">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
 							<div class="img-center img-col-3-12">
 								<img src="<?php echo esc_url($url); ?>" alt="<?php the_title_attribute(); ?>">	
 
