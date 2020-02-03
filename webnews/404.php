@@ -30,42 +30,50 @@ get_header();
 						</div>
 					</div>
 				</div> 
-				<div class="d-flex justify-content-end">
-					<ul class="list-unstyled">
-						<li>
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-						</li>
-						<li>				
-							<div class="widget widget_categories">
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'webnews' ); ?></h2>
-								<ul>
+			
+					<div class="container">
+						<div class="row">
+								<div class="col-xl-8"></div>
+						<div class="col-xl-4">
+								<ul class="list-unstyled">
+								<li>
+									<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+								</li>
+								<li>				
+									<div class="widget widget_categories">
+										<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'webnews' ); ?></h2>
+										<ul>
+											<?php
+											wp_list_categories( array(
+												'orderby'    => 'count',
+												'order'      => 'DESC',
+												'show_count' => 1,
+												'title_li'   => '',
+												'number'     => 10,
+											) );
+											?>
+										</ul>
+									</div><!-- .widget -->
+								</li>
+								<li>
 									<?php
-									wp_list_categories( array(
-										'orderby'    => 'count',
-										'order'      => 'DESC',
-										'show_count' => 1,
-										'title_li'   => '',
-										'number'     => 10,
-									) );
+									/* translators: %1$s: smiley */
+									$webnews_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'webnews' ), convert_smilies( ':)' ) ) . '</p>';
+									the_widget( 'WP_Widget_Archives', 'dropdown=0', "after_title=</h2>$webnews_archive_content" );
 									?>
-								</ul>
-							</div><!-- .widget -->
-						</li>
-						<li>
-							<?php
-							/* translators: %1$s: smiley */
-							$webnews_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'webnews' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=0', "after_title=</h2>$webnews_archive_content" );
-							?>
-							
-						</li>
-						<li>		
-						<?php 
-							the_widget( 'WP_Widget_Tag_Cloud' );
-						?>
-						</li>
-					</ul>
-				</div>
+									
+								</li>
+								<li>		
+								<?php 
+									the_widget( 'WP_Widget_Tag_Cloud' );
+								?>
+								</li>
+							</ul>
+						</div>
+						</div>
+					</div>
+					
+			
 
 
 
