@@ -1,50 +1,17 @@
 ( function( $ ) { 
   
-  if($('.widget_social_links').parent().hasClass('topbarRight')){
-    $('.topbarRight').css({'margin-left': '-2.5rem'});
-  }
-
-  if($('.widget_social_links').parent().hasClass('topbarLeft')){
-    $('.topbarLeft').css({ 'margin-left': '-2rem'});
-  }
-
-  if($('.widget_contact_info').parent().hasClass('topbarLeft')){
-    $('.topbarLeft').addClass('list-unstyled');
-    $('.topbarLeft').css({
-          'margin-left': '2rem',
-          'padding':'0'
-    });
-  }
-
-  if ($('.widget_social_links').parent().hasClass('headerRight')) {
-    $('.headerRight').css({'padding-top': '2.5rem'})
-  } 
-
-  if ($('.widget_contact_info').parent().hasClass('topbarRight')) {
-    $('.topbarRight').addClass('list-unstyled');
-    $('.topbarRight').css({'padding-top':'0','margin-left': '2rem'});
-  }
-
-  if ($('.widget_media_image').parent().hasClass('headerRight')) {
-    $('.headerRight').css({
-      'margin-left': '-10.5rem',
-      'margin-top': '1rem'});
-  }
-
+  // contact info && image published
   if($('.widget_media_image').parent().hasClass('headerRight') && $('.widget_contact_info').parent().hasClass('topbarRight')){
-    $('.topbarRight').addClass('list-unstyled');
     $('.topbarRight').css({
-      'margin-left': '15.5rem'
+      'margin-left': '-105px'
     });
   }
 
-    //social links & image_published
+  //social links & image published
   if($('.widget_social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
-    $('.topbarRight').css({'margin-left': '-14.4rem'});
-
-    $('.headerRight').css({
-      'margin-left': '-10rem',
-      'margin-top': '1rem'});
+    $('.topbarRight').css({
+      'margin-left': '-95px'
+    });
   }
 
   //end of header customizer
