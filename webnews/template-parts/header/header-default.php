@@ -5,6 +5,7 @@
 				</div>
 				<div class="col-sm-12 col-md-5 col-lg-4  headerSection">
 				</div>
+				
 				<div class=" col-sm-12 col-md-7 col-lg-8  headerSectionTwo">
 					<div class="site-branding">
 						<?php
