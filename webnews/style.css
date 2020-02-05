@@ -905,7 +905,9 @@ a:hover, a:active {
 	font-size: 16px !important;
 	text-decoration: underline;
 }
-
+.site-footer-widgets .widget_social_links > .social-links-top{
+	margin-left: 32px;
+}
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

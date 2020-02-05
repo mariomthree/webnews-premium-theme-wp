@@ -1,5 +1,5 @@
 <div style="background-color: #113555;">
-<div class="container-fluid">
+<div class="container-fluid site-footer-widgets">
 	<div class="row p-5">
 		<div class="col-xl-4 col-md-4 col-sm-12">
 				<?php 
