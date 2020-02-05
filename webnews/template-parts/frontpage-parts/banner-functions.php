@@ -19,8 +19,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid pb-4">
 					<div class="row">
-						<div class="col-md-2 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
-						<div class="col-md-10 bg-collgray"></div>
+						<div class="col-md-5 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
+						<div class="col-md-7 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -49,11 +49,11 @@
 				                        <?php } ?>
 				                                 
 								        <div class="carousel-caption text-left">
-								          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-				                          <h5>
+								          <div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+				                          <h5 class="title">
 				                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 								          </h5>
-										  <div class="entry-meta frontpage">
+										  <div class="entry-meta">
 				           					<?php echo webnews_entry_meta(); ?>
 				       					  </div>	
 								        </div>
@@ -84,8 +84,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
-						<div class="col-md-6 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
-						<div class="col-md-6 bg-collgray"></div>
+						<div class="col-md-7 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
+						<div class="col-md-5 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -112,14 +112,14 @@
 
 								<div class="carousel-caption d-md-block text-left">
 									
-									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-									<h5>
+									<div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+									<h5 class="title">
 		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
 					          		
-					          		<div class="entry-meta frontpage">
+					          		<div class="entry-meta">
 	       								<?php echo webnews_entry_meta(); ?>
 	   								</div>	
    							</div>
@@ -151,8 +151,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
-						<div class="col-md-3 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
-						<div class="col-md-9 bg-collgray"></div>
+						<div class="col-md-5 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
+						<div class="col-md-7 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -177,14 +177,14 @@
 
 								<div class="carousel-caption d-md-block text-left">
 									
-									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-									<h5>
+									<div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+									<h5 class="title">
 		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
 					          		
-					          		<div class="entry-meta frontpage">
+					          		<div class="entry-meta">
 	       								<?php echo webnews_entry_meta(); ?>
 	   								</div>	
 
@@ -225,11 +225,11 @@
 		                        <?php } ?>
 		                                 
 						        <div class="carousel-caption text-left">
-						          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-		                          <h5>
+						          <div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+		                          <h5 class="title">
 		                            <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 						          </h5>
-								  <div class="entry-meta frontpage">
+								  <div class="entry-meta">
 		           					<?php echo webnews_entry_meta(); ?>
 		       					  </div>	
 						        </div>
@@ -276,14 +276,14 @@
 
 								<div class="carousel-caption d-md-block text-left">
 									
-									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-									<h5>
+									<div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+									<h5 class="title">
 		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
 					          		
-					          		<div class="entry-meta frontpage">
+					          		<div class="entry-meta ">
 	       								<?php echo webnews_entry_meta(); ?>
 	   								</div>	
 
@@ -316,8 +316,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
-						<div class="col-md-3 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
-						<div class="col-md-9 bg-collgray"></div>
+						<div class="col-md-5 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_slider); ?></div>
+						<div class="col-md-7 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -326,8 +326,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
-						<div class="col-md-3 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
-						<div class="col-md-9 bg-collgray"></div>
+						<div class="col-md-5 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
+						<div class="col-md-7 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -357,11 +357,11 @@
                         <?php } ?>
                                  
 				        <div class="carousel-caption text-left">
-				          <div class="categorys py-3"><?php webnews_get_category(); ?></div>
-                          <h5>
+				          <div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+                          <h5 class="title">
                             <a href="<?php the_permalink(); ?>" class="text-white"> <?php the_title(); ?> </a>
 				          </h5>
-						  <div class="entry-meta frontpage">
+						  <div class="entry-meta">
            					<?php echo webnews_entry_meta(); ?>
        					  </div>	
 				        </div>
@@ -391,8 +391,8 @@
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
-						<div class="col-md-3 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
-						<div class="col-md-9 bg-collgray"></div>
+						<div class="col-md-5 bg-danger text-white text-uppercase p-2"><?php echo esc_attr($title_trending); ?></div>
+						<div class="col-md-7 bg-collgray"></div>
 					</div>
 				</div>
 				<!-- end of bar-notification -->
@@ -417,14 +417,14 @@
 
 								<div class="carousel-caption d-md-block text-left">
 									
-									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-									<h5>
+									<div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+									<h5 class="title">
 		                                <a href="<?php the_permalink(); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
 					          		
-					          		<div class="entry-meta frontpage">
+					          		<div class="entry-meta">
 	       								<?php echo webnews_entry_meta(); ?>
 	   								</div>	
 
@@ -460,14 +460,14 @@
 
 								<div class="carousel-caption d-md-block text-left">
 									
-									<div class="categorys py-3"><?php webnews_get_category(); ?></div>
-									<h5>
+									<div class="categorys frontpage pb-3"><?php webnews_get_category(); ?></div>
+									<h5 class="title">
 		                                <a href="<?php esc_attr(get_permalink()); ?>" class="text-white">
 						            	 <?php the_title(); ?>
 						             	</a>
 					          		</h5>
 					          		
-					          		<div class="entry-meta frontpage">
+					          		<div class="entry-meta">
 	       								<?php echo webnews_entry_meta(); ?>
 	   								</div>	
 

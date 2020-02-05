@@ -9,10 +9,10 @@
                     <!-- bar-notification -->
                     <div class="container-fluid pb-4">
                         <div class="row">
-                            <div class="col-md-2 bg-danger text-white text-uppercase p-2">
+                            <div class="col-md-4 bg-danger text-white text-uppercase p-2">
                                 <?php echo esc_attr($featured_title); ?>
                             </div>
-                            <div class="col-md-10 bg-collgray">
+                            <div class="col-md-8 bg-collgray">
                             </div>
                         </div>
                     </div>

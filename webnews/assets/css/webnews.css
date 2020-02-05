@@ -192,14 +192,14 @@ p,a{
 }
 
 .headerSection .widget{
-		text-align: left;
+		text-align: left; 
 }
 
 .headerSection .topbarRight{
-		margin-left: 22px;
+		margin-left: 56px;
 }
 .headerSection .topbarLeft{
-		margin-left: -15px;
+		margin-left: 40px;
 }
 	.headerSection:nth-of-type(2) {
 		border-top: 2px solid #f8f8f8;
@@ -307,7 +307,15 @@ div.featured_03:nth-of-type(2){
 	Post Meta - Widget
 	-----------------------------------------------
 */
-
+.title a{
+	font-weight: 500;
+	font-size: 18px;
+}
+div.categorys.simple{
+	position: absolute;
+	top: 10px;
+	left: 25px;
+}
 .categorys a{
 	color:white;
 	padding: 4px;
@@ -368,13 +376,11 @@ div.fita span{
 	font-size: 15px;
 	color: white;
 }
-@media screen and (max-width:360px){
-	.meta-slim.frontpage,
-	.entry-meta.frontpage{
+@media screen and (max-width:400px){
+	.categorys.frontpage{
 		display: none;
 	}
 }
-
 /*
 	Footer
 	--------------------------------------------
@@ -403,7 +409,7 @@ div.fita span{
 .img-center{
 	display: grid;
 	align-content: center;
-	background-color: #89898c;
+	background-color: #57575b;
 }
 .img-center img{
 	width: 100%;
@@ -450,15 +456,42 @@ div.fita span{
 .col-40 img{
 	max-height: 247px;
 }
-@media (max-width: 1200px){
-.img-col-5,
-.img-col-6,
-.img-col-8,
-.img-col-4-12,
+@media (max-width: 1080px){
+	
+.img-col-8{
+		height: 500px;
+}
+.img-col-8 img{
+		max-height: 500px;
+}
+.img-col-4-12{
+  height: 238.4px
+}
+.img-col-4-12 img{
+		max-height: 238.4px;
+}
+.img-col-6{
+	height: 453px;
+}
+.img-col-6 img{
+	max-height: 453px;
+}
+.img-col-6-6{
+	height: 177px;
+}
+.img-col-6-6 img{
+	height: 177px;
+}
+.img-col-3-12{
+		height: 178px
+}
+.img-col-3-12 img{
+		max-height: 178px;
+}
 .img-col-3-12,
 .img-col-6-6,
 .col-40{
-	height: auto;
+	/*height: auto;*/
 }
 .img-col-6-6 img
 .img-col-3-12 img,
@@ -467,7 +500,7 @@ div.fita span{
 .img-col-6 img,
 .img-col-8 img,
 .col-40 img{
-	max-height: auto;
+	/*max-height: auto;*/
 }}
 /*
 	ARCHIVE
