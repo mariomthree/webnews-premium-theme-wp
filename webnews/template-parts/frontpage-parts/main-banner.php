@@ -12,7 +12,7 @@
 		<!-- main banner -->
 		<section class="banner px-3 py-4">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row  banner-03">
 				<?php 
 					if ($banner_style == 'banner-01'){
 						banner_01();

@@ -693,14 +693,16 @@ a:hover, a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width:769px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
+	 	transition: 1s all;
 	}
 }
 

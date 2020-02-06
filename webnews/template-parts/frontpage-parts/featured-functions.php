@@ -106,7 +106,7 @@
 	                        $url = '';
 	                    } 
 	            ?>
-	            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-5">
+	            <div class="featured-02 col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-5">
 	            	<div class="img-center img-col-4-12">
 	            	
 		                <?php
@@ -145,7 +145,7 @@
 		                            $url = '';
 		                        }
 		                ?>
-		                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-4">
+		                <div class="featured-02 col-xl-3 col-lg-3 col-md-3 col-sm-12 mb-4">
 		                	<div class="img-center img-col-3-12">
 		                		<div class="categorys frontpage simple"><?php webnews_get_category(); ?></div>
 			                	<?php
@@ -249,7 +249,7 @@
 				                        <?php webnews_entry_meta(); ?>
 				                </div> 
 		                        
-             				 <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,130).' [...]'; ?></p>
+             				 <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,100).' [...]'; ?></p>
              			</div>
 	         
 		            	<?php
@@ -291,7 +291,7 @@
 		                      <div class="entry-meta frontpage">
 		                        <?php echo webnews_entry_meta(); ?>
 		                      </div> 
-		                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,110).' [...]'; ?></p>
+		                     <p class="pt-2"> <?php echo substr(strip_tags(get_the_content()),0,100).' [...]'; ?></p>
 			            </div>
 		                <?php
 		                    $i++;

@@ -21,7 +21,7 @@
                 </div>
 
                 <!-- featured-post -->
-                <div class="container-fluid">
+                <div class="container-fluid latest">
                 	<?php if ($all_posts->have_posts()) : ?>
                 	<div class="row">
                 		<?php  
@@ -35,7 +35,7 @@
 			                        $url = '';
 			                    } 
 	            		?>
-                		<div class="col-sm-12 col-md-3 col-lg-3 mb-4">
+                		<div class="lastest col-sm-12 col-md-3 col-lg-3 mb-4">
                             <div class="img-center img-col-3-12">
                                 <div class="categorys frontpage simple"><?php webnews_get_category(); ?></div>
                	                <?php
