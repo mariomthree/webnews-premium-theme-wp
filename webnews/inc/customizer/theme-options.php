@@ -17,36 +17,6 @@ $wp_customize->add_panel('theme_option_panel',
 	)
 );
 
-// Breadcrumb #1
-/*
-$wp_customize->add_section('site_breadcrumb_settings',
-    array(
-        'title'      => esc_html__('Breadcrumb Options', 'webnews'),
-        'priority'   => 49,
-        'capability' => 'edit_theme_options',
-        'panel'      => 'theme_option_panel',
-    )
-);
-
-$wp_customize->add_setting('enable_breadcrumb',
-    array(
-        'default'           => false,
-        'capability'        => 'edit_theme_options',
-        'sanitize_callback' => 'webnews_sanitize_checkbox',
-    )
-);
-
-$wp_customize->add_control('enable_breadcrumb',
-    array(
-        'label'    => esc_html__('Show breadcrumbs', 'webnews'),
-        'section'  => 'site_breadcrumb_settings',
-        'type'     => 'checkbox',
-        'priority' => 10,
-    )
-);
-*/
-//End of Breadcrumb
-
 //Blog Sidebar #1
 
 $wp_customize->add_section('blog_sidebar',

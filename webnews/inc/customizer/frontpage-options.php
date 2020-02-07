@@ -297,7 +297,7 @@ $wp_customize->add_control( 'frontpage_show_latest_posts',
     )
 );
 
-$wp_customize->add_setting('frontpage_latest_posts_title',
+$wp_customize->add_setting('frontpage_last_posts_title',
     array(
         'default'           =>  __('You may have missed', 'webnews'),
         'capability'        => 'edit_theme_options',
@@ -305,7 +305,7 @@ $wp_customize->add_setting('frontpage_latest_posts_title',
     )
 );
 
-$wp_customize->add_control('frontpage_latest_posts_title',
+$wp_customize->add_control('frontpage_last_posts_title',
     array(
         'label'    => esc_html__('Latest Posts Title', 'webnews'),
         'section'  => 'frontpage_latest_posts_settings',

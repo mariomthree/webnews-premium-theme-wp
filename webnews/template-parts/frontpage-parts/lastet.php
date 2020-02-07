@@ -1,8 +1,8 @@
 <?php  
-	$latest_title  = get_theme_mod('frontpage_latest_posts_title','You may have missed');
+	$last_title  = get_theme_mod('frontpage_last_posts_title','You may have missed');
 	$all_posts 	   = webnews_get_posts(5);
 ?>
-    <!-- latest -->
+    <!-- last-container -->
     <section class="px-2 py-5">
         <div class="container-fluid">
             <div class="row">
@@ -10,10 +10,10 @@
                     <!-- bar-notification -->
                     <div class="container-fluid pb-4">
                         <div class="row">
-                            <div class="col-md-4 bg-danger text-white text-uppercase p-2">
-                                <?php echo esc_attr($latest_title); ?>
+                            <div class="col-md-5 bg-danger text-white text-uppercase p-2">
+                                <?php echo esc_attr($last_title); ?>
                             </div>
-                            <div class="col-md-8 bg-collgray">
+                            <div class="col-md-7 bg-collgray">
                             </div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                 </div>
 
                 <!-- featured-post -->
-                <div class="container-fluid latest">
+                <div class="container-fluid last-container">
                 	<?php if ($all_posts->have_posts()) : ?>
                 	<div class="row">
                 		<?php  
@@ -35,7 +35,7 @@
 			                        $url = '';
 			                    } 
 	            		?>
-                		<div class="lastest col-sm-12 col-md-3 col-lg-3 mb-4">
+                		<div class="last col-sm-12 col-md-3 col-lg-3 mb-4">
                             <div class="img-center img-col-3-12">
                                 <div class="categorys frontpage simple"><?php webnews_get_category(); ?></div>
                	                <?php
