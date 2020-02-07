@@ -15,7 +15,13 @@
 		?>
 	</main><!-- #main -->
 </div><!-- #primary -->
-
+<div class="container-fluid scroll">
+	<div class="scrollUp-container">
+			<div id="scrollUp" class="scrollUp">
+				<i class="fa fa-angle-up"></i>
+			</div>
+	</div>
+</div>
 
 <?php
 	get_footer();
