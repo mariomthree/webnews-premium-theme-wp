@@ -43,7 +43,7 @@ class twitter extends WP_Widget{
     public function form($instance){
         $instance =   wp_parse_args($instance,array(
             'title'             =>  'Latest Tweets',
-            'username'          =>  'mariomtree',
+            'username'          =>  'mariomthree',
             'width'             =>  '300',
             'height'            =>  '250',
             'theme'             =>  'dark',
