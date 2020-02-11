@@ -33,7 +33,7 @@ $sidebar = get_theme_mod('blog_sidebar_position','right');
 					endif; 
 					if ($sidebar == 'none') :
 				?>
-				<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+				<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12 webnews-col">
 					<?php else: ?>
 				<div class="col-xl-8 col-md-8 col-lg-8 col-sm-12">
 					<?php
