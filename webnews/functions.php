@@ -254,6 +254,49 @@ function webnews_scripts() {
 add_action( 'wp_enqueue_scripts', 'webnews_scripts' );
 
 /**
+ *	Required and Recommend Plugins
+ */
+add_action( 'tgmpa_register', 'webnews_register_required_plugins' );
+function webnews_register_required_plugins() {
+
+    $plugins = array(
+    	//Multilanguage
+        array(
+            'name'      =>  esc_html__('Multilanguage by BestWebSoft', 'webnews' ),
+            'slug'      => 'multilanguage',
+            'required'  => false,
+
+        ),
+        //Contact form 7
+        array(
+            'name'      => esc_html__('Contact Form 7', 'webnews' ),
+            'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
+        //MailChimp for WordPress
+        array(
+            'name'      =>  esc_html__('MailChimp for WordPress ', 'webnews' ),
+            'slug'      => 'mailchimp-for-wp',
+            'required'  => false,
+        ),
+        //Instagram
+        array(
+            'name'      =>  esc_html__('Instagram Feed', 'webnews' ),
+            'slug'      => 'instagram-feed',
+            'required'  => false,
+        ),
+        //Social Counter
+        array(
+            'name'      =>  esc_html__('AccessPress Social Counter', 'webnews' ),
+            'slug'      => 'accesspress-social-counter',
+            'required'  => false,
+        )
+    );
+
+    tgmpa( $plugins );
+
+}
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -280,12 +323,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+require get_template_directory() . '/class-tgm-plugin-activation.php';
 require get_template_directory() . '/inc/theme-support.php';
 require get_template_directory() . '/inc/theme-info.php';
-require get_template_directory() . '/inc/widgets/contact-info.php';
-require get_template_directory() . '/inc/widgets/social-links.php';
-require get_template_directory() . '/inc/widgets/facebook.php';
-require get_template_directory() . '/inc/widgets/twitter.php';
 require get_template_directory() . '/template-parts/frontpage-parts/featured-functions.php';
 require get_template_directory() . '/template-parts/frontpage-parts/banner-functions.php';
 require get_template_directory() . '/template-parts/archive/archive-functions.php';
+
