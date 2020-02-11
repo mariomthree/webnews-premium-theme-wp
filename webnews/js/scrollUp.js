@@ -1,26 +1,21 @@
-jQuery(document).ready( function($){
+(function($){
 
-	$(window).scroll( function(){
-		
-		var scroll = $(window).scrollTop();
-		
-		if (scroll >= 240) {
+	var buttonScroll = window.document.querySelector('button#scrollUp');
+	buttonScroll.addEventListener('click', topFunction);
 
-			$('.scroll').css({
-			    'display': 'block'
-			});
-			var area = window.document.querySelector('div#scrollUp');
-			area.addEventListener('click', scrollTop_click);
+	window.onscroll = function() {scrollFunction()};
 
-			function scrollTop_click(){
-				var divScroll = $('div#page').offset().top;
-				$('html,body').animate({scrollTop:divScroll},500);
-			}
-		}else{
-			$('.scroll').css({
-			    'display': 'none'
-			});
-		}
-	});
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    buttonScroll.style.display = "block";
+	  } else {
+	    buttonScroll.style.display = "none";
+	  }
+	}
 
-});
+	function topFunction() {
+	  document.body.scrollTop = 0; // For Safari
+	  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+
+})(jQuery);

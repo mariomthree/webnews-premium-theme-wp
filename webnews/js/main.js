@@ -15,7 +15,6 @@
   }
 
   //end of header customizer
-  
   $('div.slim h5').addClass('meta');
   $( '.meta' ).css( {
       'left': '10%'
