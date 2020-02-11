@@ -10,7 +10,7 @@ $header_img = has_header_image() ? get_header_image() : get_template_directory_u
 get_header();
 
 $page_title = explode(':', get_the_archive_title())[1];
-
+$sidebar = get_theme_mod('blog_sidebar_position','right');
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -25,13 +25,13 @@ $page_title = explode(':', get_the_archive_title())[1];
 
 		<div class="container-fluid webnews-container py-5 px-3">
 			<div class="row">
-				<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
+				<?php if ($sidebar == 'left') : ?>
 				<div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
 					<?php get_sidebar(); ?>
 				</div>
 				<?php 
 					endif; 
-					if (get_theme_mod('blog_sidebar_position') == 'none') :
+					if ($sidebar == 'none') :
 				?>
 				<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
 					<?php else: ?>
@@ -63,7 +63,7 @@ $page_title = explode(':', get_the_archive_title())[1];
 				endif; ?>
 				</div>
 
-				<?php if (get_theme_mod('blog_sidebar_position','right') == 'right') : ?>
+				<?php if ($sidebar == 'right') : ?>
 					<div class="col-xl-4 col-md-4 col-lg-4 col-sm-12">
 						<?php get_sidebar(); ?>
 					</div>

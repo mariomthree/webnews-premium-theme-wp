@@ -13,22 +13,22 @@
  */
 
 get_header();
-
+$sidebar = get_theme_mod('blog_sidebar_position','right');
 ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="container-fluid py-5 px-4">
 				<div class="row">
-					<?php if (get_theme_mod('blog_sidebar_position') == 'left') : ?>
+					<?php if ($sidebar == 'left') : ?>
 					<div class="col-xl-4 col-md-4 col-sm-12">
 						<?php get_sidebar(); ?>
 					</div>
 					<?php 
 						endif; 
-						if (get_theme_mod('blog_sidebar_position') == 'none') :
+						if ($sidebar == 'none') :
 					?>
-					<div class="col-xl-12 col-md-12 col-sm-12">
+					<div class="col-xl-12 col-md-12 col-sm-12 webnews-col">
 						<?php else: ?>
 					<div class="col-xl-8 col-md-8 col-sm-12">
 						<?php
@@ -65,7 +65,7 @@ get_header();
 						endif;
 						?>
 					</div>
-					<?php if (get_theme_mod('blog_sidebar_position') == 'right') : ?>
+					<?php if ($sidebar == 'right') : ?>
 					<div class="col-xl-4 col-md-4 col-sm-12">
 						<?php get_sidebar(); ?>
 					</div>
@@ -75,6 +75,6 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<button id="scrollUp" title="Go to top"><i class="fa fa-angle-up"></i></button>
 <?php
 get_footer();

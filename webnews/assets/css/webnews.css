@@ -485,11 +485,24 @@ div.fita span{
 }
 .webnews-col-40,
 .webnews-col-60{
-  position:relative;
- 	width:100%;
- padding-right:15px;
- padding-left:15px
+	position:relative;
+	width:100%;
+	padding-right:15px;
+	padding-left:15px
 }
+.webnews-col
+.webnews-col-40{
+	-ms-flex: 0 0 28%;
+	flex: 0 0 28%;
+	max-width: 28%;
+}
+.webnews-col
+.webnews-col-60{
+	-ms-flex: 0 0 72%;
+	flex: 0 0 72%;
+	max-width: 72%;
+}
+
 .webnews-col-40{
 	-ms-flex: 0 0 40%;
 	flex: 0 0 40%;
@@ -503,7 +516,7 @@ div.fita span{
 	
 }
 @media (max-width: 768px) {
-	.webnews-col-40{
+.webnews-col-40{
 	-ms-flex: 0 0 40%;
 	flex: 0 0 40%;
 	max-width: 40%;
@@ -515,6 +528,8 @@ div.fita span{
 }	
 }
 @media (max-width: 576px) {
+.webnews-col .webnews-col-60,
+.webnews-col .webnews-col-40,
 .webnews-col-60,
 .webnews-col-40{
 	-ms-flex: 0 0 100%;
