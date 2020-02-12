@@ -1,14 +1,14 @@
 ( function( $ ) { 
   
   // contact info && image published
-  if($('.widget_media_image').parent().hasClass('headerRight') && $('.widget_contact_info').parent().hasClass('topbarRight')){
+  if($('.widget_media_image').parent().hasClass('headerRight') && $('.widget_contactinfo').parent().hasClass('topbarRight')){
     $('.topbarRight').css({
       'margin-left': '-105px'
     });
   }
 
   //social links & image published
-  if($('.widget_social_links').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
+  if($('.widget_sociallinks').parent().hasClass('topbarRight') && $('.widget_media_image').parent().hasClass('headerRight')) {
     $('.topbarRight').css({
       'margin-left': '-95px'
     });
