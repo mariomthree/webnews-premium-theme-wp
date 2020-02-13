@@ -262,13 +262,13 @@ function webnews_register_required_plugins() {
     $plugins = array(
        //M3 Toolbox
         array(
-            'name'      =>  esc_html__('M3 Toolbox', 'webnews' ),
-            'slug'      => 'M3Toolbox',
-            'source'    => get_template_directory() . '/plugins/M3Toolbox.zip',
-            'required'  => true,
-            'version'   => '1.0.0',
-            'force_activation' => false,
-            'force_deactivation' => false,
+            'name'              =>  esc_html__('M3 Toolbox', 'webnews' ),
+            'slug'              => 'm3-toolbox',
+            'source'            => get_template_directory() . '/plugins/m3-toolbox.zip',
+            'required'          => true,
+            'version'           => '1.0.0',
+            'force_activation'  => false,
+            'force_deactivation'=> false,
         ),
     	//Multilanguage
         array(

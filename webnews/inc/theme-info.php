@@ -38,22 +38,26 @@ function webnews_info_page() {
                 
                 <div class="webnews-tab-wrapper">
                     <div   id="#started" class="webnews-tab started show">
-                        <h3><?php esc_html_e( 'Step 1 - Read documentation', 'webnews' ); ?></h3>
-                        <p><?php esc_html_e( 'Please see documentation so that it can help you better understand the structure and organization of webnews.', 'webnews' ); ?></p>
-                        <p><a class="button button-primary button-large" href=""><?php esc_html_e( 'View documentation', 'webnews' ); ?></a></p>
+                        <h3><?php esc_html_e( 'Step 1 - Implement recommended actions', 'webnews' ); ?></h3>
+                        <p><?php esc_html_e( 'Install the M3 Toolbox so that you have access to the web news tools.', 'webnews' ); ?></p>
+                         <p><a class="button button-primary button-large" href="<?php echo admin_url('themes.php?page=tgmpa-install-plugins'); ?>"><?php esc_html_e( 'Install and active', 'webnews' ); ?></a></p>
                         <hr>
-                        <h3><?php esc_html_e( 'Step 2 - Customize', 'webnews' ); ?></h3>
+                        <h3><?php esc_html_e( 'Step 2 - Read documentation', 'webnews' ); ?></h3>
+                        <p><?php esc_html_e( 'Please see documentation so that it can help you better understand the structure and organization of webnews.', 'webnews' ); ?></p>
+                        <p><a target="_blank" class="button button-primary button-large" href="https://github.com/mariomthree/webnews-WP-Docs"><?php esc_html_e( 'View documentation', 'webnews' ); ?></a></p>
+                        <hr>
+                        <h3><?php esc_html_e( 'Step 3 - Customize', 'webnews' ); ?></h3>
                         <p><?php esc_html_e( 'Use the customizer to structure your website and make it even more elegant.', 'webnews' ); ?></p>
                         <p><a class="button button-primary button-large" href="<?php echo admin_url( 'customize.php' ); ?>"><?php esc_html_e( 'Customizer', 'webnews' ); ?></a></p>
                         <hr>
-                        <h3><?php esc_html_e( 'Step 3 - Demo Content', 'webnews' ); ?></h3>
+                        <h3><?php esc_html_e( 'Step 4 - Demo Content', 'webnews' ); ?></h3>
                         <p><?php esc_html_e( 'First install One Click Demo Import then import the files. See all the details in the Demo Content tab.', 'webnews' ); ?></p>
                         <p><a class="go-demo button button-primary button-large" href="#demo" data-target="demo"><?php esc_html_e( 'Go to Demo Content', 'webnews' ); ?></a></p>
                     </div>
                     <div id="#support" class="webnews-tab support">
 
                         <h3> <span class="dashicons dashicons-sos"></span> <?php esc_html_e( 'You have any question?', 'webnews' ); ?></h3>
-                        <p><?php esc_html_e( 'Entre em contacto connosco para que possamos ajudar-te.', 'webnews' ); ?></p>
+                        <p><?php esc_html_e( 'Get in touch with us so we can help you..', 'webnews' ); ?></p>
                             <a href="" target="_blank"><?php esc_html_e( 'Contact us', 'webnews' ); ?></a>              
                    
                         <h3> <span class="dashicons dashicons-book-alt"></span> <?php esc_html_e( 'Documentation', 'webnews' ); ?></h3>
@@ -65,11 +69,8 @@ function webnews_info_page() {
                     <div id="#demo" class="webnews-tab demo">
                         <h3><?php esc_html_e( 'Step 1 - Install One Click Demo Import', 'webnews' ); ?></h3>
                         <p><a class="button button-primary button-large" href="<?php echo admin_url('plugin-install.php?s=One+Click+Demo+Import&tab=search&type=term'); ?>"><?php esc_html_e( 'Install and active', 'webnews' ); ?></a></p>
-                             <h3><?php esc_html_e( 'Step 2 - Go to One  Click Demo Import', 'webnews' ); ?></h3>
-                        <p><?php esc_html_e( 'Go to the One Click Demo Import panel, import the demo content we have and enjoy webnews in the best way.', 'webnews' ); ?></p>
-                        <h3><?php esc_html_e("Demo files",'webnews') ?></h3>
-                        <p><?php esc_html_e('Demo content is also available on github, download and import.
-.','webnews') ?> </p>
+                        <h3><?php esc_html_e("Step 2 - Demo files",'webnews') ?></h3>
+                        <p><?php esc_html_e('Demo content is also available on github, download and import.','webnews') ?> </p>
                         <p><a target="_blank" class="button button-primary button-large" href="https://github.com/mariomthree/webnews-WP-Docs"><?php esc_html_e( 'Go to github', 'webnews' ); ?></a></p>
                     </div>
                 </div>
