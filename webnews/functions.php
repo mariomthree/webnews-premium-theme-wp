@@ -266,28 +266,20 @@ function webnews_register_required_plugins() {
             'slug'              => 'm3-toolbox',
             'source'            => get_template_directory() . '/plugins/m3-toolbox.zip',
             'required'          => true,
-            'version'           => '1.0.0',
-            'force_activation'  => false,
-            'force_deactivation'=> false,
         ),
-    	//Multilanguage
+    	//All-in-One WP Migration
+        array(
+            'name'      =>  esc_html__('All-in-One WP Migration', 'webnews' ),
+            'slug'      => 'all-in-one-wp-migration',
+            'required'  => false,
+
+        ),
+        //Multilanguage
         array(
             'name'      =>  esc_html__('Multilanguage by BestWebSoft', 'webnews' ),
             'slug'      => 'multilanguage',
             'required'  => false,
 
-        ),
-        //Contact form 7
-        array(
-            'name'      => esc_html__('Contact Form 7', 'webnews' ),
-            'slug'      => 'contact-form-7',
-            'required'  => false,
-        ),
-        //MailChimp for WordPress
-        array(
-            'name'      =>  esc_html__('MailChimp for WordPress ', 'webnews' ),
-            'slug'      => 'mailchimp-for-wp',
-            'required'  => false,
         ),
         //Instagram
         array(

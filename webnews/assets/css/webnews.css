@@ -235,6 +235,9 @@ p,a{
 		border-top: 2px solid #f8f8f8;
 }
 }
+.widget-footer .social-links-top{
+	margin-left: 30px;
+}
 /*
 	Navigation
 	--------------------------------------------

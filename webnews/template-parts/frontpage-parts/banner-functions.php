@@ -80,7 +80,7 @@
 
 				<!-- end of slider -->
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-12 pb-5">
+			<div class="col-lg-4 col-md-4 col-sm-12 pb-2">
 				<!-- bar-notification -->
 				<div class="container-fluid mb-4">
 					<div class="row">
@@ -157,7 +157,7 @@
 				</div>
 				<!-- end of bar-notification -->
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 pb-5">
+			<div class="col-lg-3 col-md-3 col-sm-12 pb-2">
 				<!-- treding post -->
 					 <?php if ($posts_treding->have_posts()) : ?>
 					<div class="row">
@@ -200,7 +200,7 @@
 					</div>
 				<!-- end of treding post -->
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 pb-5">
+			<div class="col-lg-6 col-md-6 col-sm-12 pb-2">
 				<!-- slider -->
 				 <?php if ($posts_slider->have_posts()) : ?>
 				  <div id="carouselCaptions" class="banner-02 carousel slide carousel-fade" data-ride="carousel">
@@ -256,7 +256,7 @@
 
 				<!-- end of slider -->
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 pb-5">
+			<div class="col-lg-3 col-md-3 col-sm-12 pb-2">
 				<!-- treding post -->
 					<?php if ($posts_treding->have_posts()) : ?>
 					<div class="row">
@@ -303,7 +303,6 @@
 
 	}
 
-
 	function banner_03(){
 
 		$category_slider 	= get_theme_mod('select_slider_news_category');
@@ -323,7 +322,7 @@
 				</div>
 				<!-- end of bar-notification -->
 			</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 pb-5">
+			<div class="col-lg-6 col-md-6 col-sm-12 pb-2">
 				<!-- slider -->
 				 <?php if ($posts_slider->have_posts()) : ?>
 				  <div id="carouselCaptions" class="banner-03 carousel slide carousel-fade" data-ride="carousel">
@@ -379,7 +378,7 @@
 
 				<!-- end of slider -->
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 pb-5">
+			<div class="col-lg-3 col-md-3 col-sm-12 pb-2">
 				<!-- treding post -->
 					 <?php if ($posts_treding->have_posts()) : ?>
 					<div class="row">
@@ -422,8 +421,7 @@
 					</div>
 				<!-- end of treding post -->
 			</div>
-
-			<div class="col-lg-3 col-md-3 col-sm-12 pb-5">
+			<div class="col-lg-3 col-md-3 col-sm-12 pb-2">
 				<!-- treding post -->
 					<?php if ($posts_treding->have_posts()) : ?>
 					<div class="row">

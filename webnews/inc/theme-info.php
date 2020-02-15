@@ -51,7 +51,7 @@ function webnews_info_page() {
                         <p><a class="button button-primary button-large" href="<?php echo admin_url( 'customize.php' ); ?>"><?php esc_html_e( 'Customizer', 'webnews' ); ?></a></p>
                         <hr>
                         <h3><?php esc_html_e( 'Step 4 - Demo Content', 'webnews' ); ?></h3>
-                        <p><?php esc_html_e( 'First install One Click Demo Import then import the files. See all the details in the Demo Content tab.', 'webnews' ); ?></p>
+                        <p><?php esc_html_e( 'First install All-in-One WP Migration then import the files. See all the details in the Demo Content tab.', 'webnews' ); ?></p>
                         <p><a class="go-demo button button-primary button-large" href="#demo" data-target="demo"><?php esc_html_e( 'Go to Demo Content', 'webnews' ); ?></a></p>
                     </div>
                     <div id="#support" class="webnews-tab support">
@@ -67,8 +67,8 @@ function webnews_info_page() {
           
                     </div>
                     <div id="#demo" class="webnews-tab demo">
-                        <h3><?php esc_html_e( 'Step 1 - Install One Click Demo Import', 'webnews' ); ?></h3>
-                        <p><a class="button button-primary button-large" href="<?php echo admin_url('plugin-install.php?s=One+Click+Demo+Import&tab=search&type=term'); ?>"><?php esc_html_e( 'Install and active', 'webnews' ); ?></a></p>
+                        <h3><?php esc_html_e( 'Step 1 - Install All-in-One WP Migration', 'webnews' ); ?></h3>
+                        <p><a class="button button-primary button-large" href="<?php echo admin_url('themes.php?page=tgmpa-install-plugins&plugin_status=all'); ?>"><?php esc_html_e( 'Install and active', 'webnews' ); ?></a></p>
                         <h3><?php esc_html_e("Step 2 - Demo files",'webnews') ?></h3>
                         <p><?php esc_html_e('Demo content is also available on github, download and import.','webnews') ?> </p>
                         <p><a target="_blank" class="button button-primary button-large" href="https://github.com/mariomthree/webnews-WP-Docs"><?php esc_html_e( 'Go to github', 'webnews' ); ?></a></p>
