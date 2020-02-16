@@ -246,7 +246,10 @@ function webnews_scripts() {
 	wp_register_script('main', get_template_directory_uri(). '/js/main.js',false,'1.0.0',true);
 	wp_enqueue_script('main');
 
-	wp_register_script('scrollUp', get_template_directory_uri(). '/js/scrollUp.js',false,'1.0.0',true);
+	wp_register_script('jqueryScrollUp', get_template_directory_uri(). '/js/jquery.scrollUp.min.js',false,'2.4.1',true);
+    wp_enqueue_script('jqueryScrollUp');
+
+    wp_register_script('scrollUp', get_template_directory_uri(). '/js/scrollUp.js',false,'1.0.0',true);
 	wp_enqueue_script('scrollUp');
 
 

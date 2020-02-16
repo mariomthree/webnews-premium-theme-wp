@@ -16,7 +16,6 @@
 		?>
 	</main><!-- #main -->
 </div><!-- #primary -->
-<button id="scrollUp" title="Go to top"><i class="fa fa-angle-up"></i></button>
 <?php
 	get_footer();
 

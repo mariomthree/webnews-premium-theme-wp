@@ -1,21 +1,19 @@
-(function($){
+(function( $ ){
 
-	var buttonScroll = window.document.querySelector('button#scrollUp');
-	buttonScroll.addEventListener('click', topFunction);
+  $.scrollUp({
+    scrollName: 'scrollUp', // Element ID
+    topDistance: '300', // Distance from top before showing element (px)
+    topSpeed: 600, // Speed back to top (ms)
+    animation: 'fade', // Fade, slide, none
+    animationInSpeed: 300, // Animation in speed (ms)
+    animationOutSpeed: 200, // Animation out speed (ms)
+    scrollText: '', // Text for element
+    activeOverlay: true, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  });
+ var i = document.createElement('i'); 
+ var scroll_up = document.querySelector('a#scrollUp');
+ scroll_up.appendChild(i);
+ $('a#scrollUp i').addClass('fa fa-angle-up');
 
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	    buttonScroll.style.display = "block";
-	  } else {
-	    buttonScroll.style.display = "none";
-	  }
-	}
-
-	function topFunction() {
-	  document.body.scrollTop = 0; // For Safari
-	  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-	}
-
+                          
 })(jQuery);

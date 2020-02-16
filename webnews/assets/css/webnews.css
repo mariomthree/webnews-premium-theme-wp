@@ -1144,27 +1144,26 @@ div.fita span{
 
 
 #scrollUp {
-  cursor: pointer;  
-  display: none; 
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
-	height: 55px;
-  width: 55px;
-  background-color: #1b4871; 
-  border: 2px solid #1b4871;
-  border-radius: 50%; 
-	z-index: 99; 
-	transition: 1s all;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background:  #1b4871;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid #1b4871;
+    transition: 1s all;
 }
 #scrollUp i{
-	color: #e7e7e7;
-	font-size: 30px;
+    font-size: 25px;
+    padding: 10px;
 }
-#scrollUp:hover{
-	background-color: #e7e7e7;
-	border:2px solid #1b4871;
+#scrollUp:hover {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 2px solid #1b4871;
 }
-#scrollUp:hover > i{
-	color: #1b4871;
+#scrollUp i:hover{
+    color: #1b4871;
 }
